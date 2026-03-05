@@ -175,7 +175,11 @@
 
     var headerIcon = document.createElement('div');
     headerIcon.className = 'cps-header-icon';
-    headerIcon.innerHTML = ICON_TRUCK;
+    var logoImg = document.createElement('img');
+    logoImg.src = 'https://movelogistics.net/wp-content/uploads/2020/03/move-logistics-moving-company-logo-60.png';
+    logoImg.alt = 'Move Logistics';
+    logoImg.className = 'cps-header-logo';
+    headerIcon.appendChild(logoImg);
 
     var headerText = document.createElement('div');
     headerTitle = document.createElement('div');
