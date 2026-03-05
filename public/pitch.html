@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Chat Assistant for Move Logistics — VantaPoint Systems</title>
+<title>AI Assistant for Move Logistics — VantaPoint Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,35 +32,20 @@
     height: 64px;
     background: #fff;
     border-bottom: 1px solid #E2E8F0;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   }
   .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #1B3A5C;
+    letter-spacing: -0.3px;
   }
-  .nav-logo svg { width: 28px; height: 28px; fill: #00B4D8; }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .nav-link {
-    font-size: 14px;
-    font-weight: 500;
-    color: #6B7B8D;
-    transition: color 0.2s;
-  }
-  .nav-link:hover { color: #00B4D8; }
+  .nav-logo span { color: #00B4D8; }
   .nav-btn {
     font-size: 14px;
     font-weight: 600;
     color: #fff;
     background: #00B4D8;
-    padding: 8px 20px;
+    padding: 9px 22px;
     border-radius: 6px;
     transition: background 0.2s;
   }
@@ -69,33 +54,38 @@
   /* ===== Hero ===== */
   .hero {
     text-align: center;
-    padding: 140px 24px 80px;
+    padding: 140px 24px 88px;
     background: #fff;
   }
-  .hero-badge {
+  .hero-for {
     display: inline-block;
-    background: rgba(0,180,216,0.08);
-    color: #00B4D8;
     font-size: 13px;
     font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 24px;
+    color: #6B7B8D;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
   }
   .hero h1 {
-    font-size: 52px;
+    font-size: 56px;
     font-weight: 800;
-    line-height: 1.15;
+    line-height: 1.1;
     color: #1B3A5C;
-    max-width: 720px;
-    margin: 0 auto 20px;
-    letter-spacing: -0.5px;
+    max-width: 680px;
+    margin: 0 auto 12px;
+    letter-spacing: -1px;
   }
-  .hero h1 span { color: #00B4D8; }
+  .hero-tagline {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00B4D8;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+  }
   .hero-sub {
-    font-size: 19px;
+    font-size: 18px;
     color: #6B7B8D;
-    max-width: 560px;
+    max-width: 580px;
     margin: 0 auto 40px;
     line-height: 1.7;
   }
@@ -104,249 +94,209 @@
     background: #00B4D8;
     color: #fff;
     font-size: 16px;
-    font-weight: 600;
-    padding: 16px 48px;
+    font-weight: 700;
+    padding: 16px 52px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    box-shadow: 0 4px 16px rgba(0,180,216,0.3);
+    box-shadow: 0 4px 20px rgba(0,180,216,0.3);
+    letter-spacing: 0.5px;
   }
   .hero-btn:hover {
     background: #0096B7;
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(0,180,216,0.35);
+    box-shadow: 0 8px 32px rgba(0,180,216,0.35);
   }
   .hero-note {
-    margin-top: 16px;
+    margin-top: 14px;
     font-size: 13px;
     color: #B0BEC5;
   }
 
-  /* ===== Comparison ===== */
-  .compare {
+  /* ===== Section shared ===== */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1B3A5C;
+    margin-bottom: 8px;
+  }
+  .section-header p {
+    font-size: 16px;
+    color: #6B7B8D;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ===== What This Solves ===== */
+  .solves {
     padding: 80px 24px;
     background: #F8FAFC;
   }
-  .compare-inner {
-    max-width: 900px;
+  .solves-grid {
+    max-width: 960px;
     margin: 0 auto;
-  }
-  .compare-header {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-  .compare-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1B3A5C;
-    margin-bottom: 8px;
-  }
-  .compare-header p {
-    font-size: 16px;
-    color: #6B7B8D;
-  }
-  .compare-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
-  .compare-card {
+  .solve-card {
     background: #fff;
     border-radius: 12px;
-    padding: 36px 32px;
+    padding: 32px 28px;
     border: 1px solid #E2E8F0;
   }
-  .compare-card.current {
-    border-color: #E2E8F0;
-  }
-  .compare-card.ai {
-    border-color: #00B4D8;
-    box-shadow: 0 4px 20px rgba(0,180,216,0.08);
-  }
-  .compare-label {
-    font-size: 11px;
+  .solve-card h3 {
+    font-size: 18px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid;
-  }
-  .compare-card.current .compare-label {
-    color: #E53E3E;
-    border-color: #FED7D7;
-  }
-  .compare-card.ai .compare-label {
-    color: #00B4D8;
-    border-color: #00B4D8;
-  }
-  .compare-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .compare-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 15px;
     color: #1B3A5C;
-    line-height: 1.5;
-  }
-  .compare-icon {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    font-size: 12px;
+    gap: 10px;
   }
-  .compare-card.current .compare-icon {
-    background: #FED7D7;
-    color: #E53E3E;
+  .solve-card h3 .solve-dot {
+    width: 8px;
+    height: 8px;
+    background: #00B4D8;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
-  .compare-card.ai .compare-icon {
-    background: rgba(0,180,216,0.1);
-    color: #00B4D8;
+  .solve-card p {
+    font-size: 15px;
+    color: #6B7B8D;
+    line-height: 1.65;
   }
 
-  /* ===== Service Flows ===== */
-  .flows {
+  /* ===== What It Handles ===== */
+  .handles {
     padding: 80px 24px;
     background: #fff;
   }
-  .flows-inner {
+  .handles-grid {
     max-width: 960px;
     margin: 0 auto;
-  }
-  .flows-header {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-  .flows-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1B3A5C;
-    margin-bottom: 8px;
-  }
-  .flows-header p {
-    font-size: 16px;
-    color: #6B7B8D;
-  }
-  .flows-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .flow-card {
+  .handle-card {
     background: #fff;
     border: 1px solid #E2E8F0;
     border-radius: 12px;
     padding: 28px 24px;
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .flow-card:hover {
+  .handle-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(27,58,92,0.08);
+    box-shadow: 0 8px 24px rgba(27,58,92,0.07);
   }
-  .flow-emoji {
+  .handle-emoji {
     font-size: 28px;
     margin-bottom: 12px;
   }
-  .flow-card h3 {
+  .handle-card h3 {
     font-size: 16px;
     font-weight: 700;
     color: #1B3A5C;
     margin-bottom: 6px;
   }
-  .flow-card p {
+  .handle-card p {
     font-size: 13px;
     color: #6B7B8D;
     line-height: 1.6;
   }
 
-  /* ===== Pilot Program ===== */
-  .pilot {
+  /* ===== How It Works ===== */
+  .how {
     padding: 80px 24px;
-    background: #F0FDF4;
+    background: #F8FAFC;
   }
-  .pilot-inner {
-    max-width: 800px;
+  .how-steps {
+    max-width: 720px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
-  .pilot-badge {
-    display: inline-block;
-    background: rgba(34,197,94,0.1);
-    color: #16A34A;
-    font-size: 12px;
+  .how-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .how-step:last-child { border-bottom: none; }
+  .how-num {
+    width: 44px;
+    height: 44px;
+    background: #00B4D8;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    flex-shrink: 0;
   }
-  .pilot h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1B3A5C;
-    margin-bottom: 12px;
-  }
-  .pilot > .pilot-inner > p {
-    font-size: 16px;
-    color: #6B7B8D;
-    margin-bottom: 40px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .pilot-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 40px;
-  }
-  .pilot-item {
-    background: #fff;
-    border-radius: 12px;
-    padding: 24px 16px;
-    border: 1px solid #BBF7D0;
-    text-align: center;
-  }
-  .pilot-item-icon {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  .pilot-item h4 {
-    font-size: 14px;
+  .how-step h3 {
+    font-size: 17px;
     font-weight: 700;
     color: #1B3A5C;
     margin-bottom: 4px;
   }
-  .pilot-item p {
-    font-size: 12px;
+  .how-step p {
+    font-size: 15px;
     color: #6B7B8D;
+    line-height: 1.6;
+  }
+
+  /* ===== Pilot CTA ===== */
+  .pilot {
+    padding: 80px 24px;
+    background: #fff;
+  }
+  .pilot-box {
+    max-width: 720px;
+    margin: 0 auto;
+    background: rgba(0,180,216,0.04);
+    border: 1px solid rgba(0,180,216,0.15);
+    border-radius: 16px;
+    padding: 56px 48px;
+    text-align: center;
+  }
+  .pilot-box h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1B3A5C;
+    margin-bottom: 16px;
+  }
+  .pilot-box p {
+    font-size: 17px;
+    color: #6B7B8D;
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 32px;
   }
   .pilot-btn {
     display: inline-block;
-    background: #16A34A;
+    background: #00B4D8;
     color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 44px;
     border-radius: 8px;
     transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 16px rgba(22,163,74,0.25);
+    box-shadow: 0 4px 20px rgba(0,180,216,0.3);
   }
   .pilot-btn:hover {
-    background: #15803D;
-    box-shadow: 0 8px 24px rgba(22,163,74,0.3);
+    background: #0096B7;
+    box-shadow: 0 8px 28px rgba(0,180,216,0.35);
   }
 
   /* ===== Footer ===== */
@@ -356,16 +306,16 @@
     border-top: 1px solid #E2E8F0;
     text-align: center;
   }
-  .footer-name {
-    font-size: 15px;
+  .footer-company {
+    font-size: 14px;
     font-weight: 600;
     color: #1B3A5C;
     margin-bottom: 4px;
   }
-  .footer-company {
+  .footer-location {
     font-size: 13px;
     color: #6B7B8D;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .footer-email {
     font-size: 13px;
@@ -373,26 +323,19 @@
     font-weight: 500;
   }
   .footer-email:hover { text-decoration: underline; }
-  .footer-copy {
-    margin-top: 16px;
-    font-size: 12px;
-    color: #B0BEC5;
-  }
 
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
     .nav { padding: 0 20px; }
-    .nav-link { display: none; }
-    .hero { padding: 120px 20px 60px; }
+    .hero { padding: 120px 20px 64px; }
     .hero h1 { font-size: 34px; }
     .hero-sub { font-size: 16px; }
-    .compare-grid { grid-template-columns: 1fr; }
-    .flows-grid { grid-template-columns: 1fr; }
-    .pilot-grid { grid-template-columns: repeat(2, 1fr); }
+    .solves-grid { grid-template-columns: 1fr; }
+    .handles-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) {
     .hero h1 { font-size: 28px; }
-    .pilot-grid { grid-template-columns: 1fr 1fr; }
+    .pilot-box { padding: 40px 24px; }
   }
 </style>
 </head>
@@ -400,167 +343,127 @@
 
 <!-- Nav -->
 <nav class="nav">
-  <div class="nav-logo">
-    <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-    Move Logistics
-  </div>
-  <div class="nav-right">
-    <a href="mailto:paul@vantapointsystems.com" class="nav-link">Contact</a>
-    <a href="mailto:paul@vantapointsystems.com" class="nav-btn">Book a Meeting</a>
-  </div>
+  <div class="nav-logo"><span>Vanta</span>Point Systems</div>
+  <a href="mailto:paul@vantapointsystems.com" class="nav-btn">Book a Meeting</a>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-badge">AI-Powered Customer Service</div>
-  <h1>What if every customer got help in <span>10 seconds?</span></h1>
-  <p class="hero-sub">Your website visitors have questions about moving. Our AI answers them instantly &mdash; in English and Spanish.</p>
+  <div class="hero-for">Prepared for Move Logistics</div>
+  <h1>Built for Move Logistics</h1>
+  <div class="hero-tagline">ANYWHERE YOU NEED TO BE</div>
+  <p class="hero-sub">We built an AI assistant that answers your customers' questions instantly, gets quotes started, and works 24/7 in English and Spanish. Try it right now.</p>
   <button type="button" class="hero-btn" id="launchBtn">LAUNCH LIVE DEMO</button>
-  <p class="hero-note">No login required. Try the live bot right now.</p>
+  <p class="hero-note">No login required. This is a fully working demo.</p>
 </section>
 
-<!-- Comparison -->
-<section class="compare">
-  <div class="compare-inner">
-    <div class="compare-header">
-      <h2>See the difference</h2>
-      <p>What changes when AI handles your first response.</p>
+<!-- What This Solves -->
+<section class="solves">
+  <div class="section-header">
+    <h2>What This Solves</h2>
+    <p>Three problems every moving company faces.</p>
+  </div>
+  <div class="solves-grid">
+    <div class="solve-card">
+      <h3><span class="solve-dot"></span> Missed Calls</h3>
+      <p>Your team can't answer every call. The bot handles overflow 24/7 &mdash; so no customer goes unanswered.</p>
     </div>
-    <div class="compare-grid">
-      <div class="compare-card current">
-        <div class="compare-label">Current Experience</div>
-        <ul class="compare-list">
-          <li>
-            <div class="compare-icon">&times;</div>
-            <div>Customers call and wait on hold</div>
-          </li>
-          <li>
-            <div class="compare-icon">&times;</div>
-            <div>Same questions repeated daily by your team</div>
-          </li>
-          <li>
-            <div class="compare-icon">&times;</div>
-            <div>Missed calls on weekends and nights</div>
-          </li>
-          <li>
-            <div class="compare-icon">&times;</div>
-            <div>Website visitors leave without engaging</div>
-          </li>
-          <li>
-            <div class="compare-icon">&times;</div>
-            <div>English-only support limits your reach</div>
-          </li>
-        </ul>
+    <div class="solve-card">
+      <h3><span class="solve-dot"></span> Repeat Questions</h3>
+      <p>"How much does a move cost?" and "Do you move long distance?" get answered instantly &mdash; without tying up your staff.</p>
+    </div>
+    <div class="solve-card">
+      <h3><span class="solve-dot"></span> After Hours</h3>
+      <p>Customers searching at 11pm get help immediately instead of waiting until morning. The bot never clocks out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- What It Handles -->
+<section class="handles">
+  <div class="section-header">
+    <h2>What It Handles</h2>
+    <p>Six service flows trained on your business.</p>
+  </div>
+  <div class="handles-grid">
+    <div class="handle-card">
+      <div class="handle-emoji">&#128176;</div>
+      <h3>Get a Quote</h3>
+      <p>Walks customers through move type, date, home size, and special items &mdash; then connects them to your team.</p>
+    </div>
+    <div class="handle-card">
+      <div class="handle-emoji">&#127968;</div>
+      <h3>Local Moving</h3>
+      <p>Explains services included, San Antonio coverage areas, and why customers choose Move Logistics.</p>
+    </div>
+    <div class="handle-card">
+      <div class="handle-emoji">&#128666;</div>
+      <h3>Long Distance</h3>
+      <p>Covers your USDOT licensing, all 48 states served, and the full interstate moving process.</p>
+    </div>
+    <div class="handle-card">
+      <div class="handle-emoji">&#128230;</div>
+      <h3>Storage</h3>
+      <p>Climate-controlled and standard options, 24/7 security, short and long-term availability.</p>
+    </div>
+    <div class="handle-card">
+      <div class="handle-emoji">&#128230;</div>
+      <h3>Packing Services</h3>
+      <p>Full packing, partial packing, and supplies-only options with professional materials.</p>
+    </div>
+    <div class="handle-card">
+      <div class="handle-emoji">&#128222;</div>
+      <h3>Contact Us</h3>
+      <p>Phone, text, email, both office locations, and hours &mdash; all instantly accessible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how">
+  <div class="section-header">
+    <h2>How It Works</h2>
+    <p>Three steps. That's it.</p>
+  </div>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-num">1</div>
+      <div>
+        <h3>We add a chat widget to movelogistics.net</h3>
+        <p>A small snippet of code &mdash; takes minutes to install. We handle the entire setup.</p>
       </div>
-      <div class="compare-card ai">
-        <div class="compare-label">With AI Assistant</div>
-        <ul class="compare-list">
-          <li>
-            <div class="compare-icon">&#10003;</div>
-            <div>Instant answers 24/7 &mdash; no hold time</div>
-          </li>
-          <li>
-            <div class="compare-icon">&#10003;</div>
-            <div>Quotes started automatically in chat</div>
-          </li>
-          <li>
-            <div class="compare-icon">&#10003;</div>
-            <div>Every question handled, even at 2am</div>
-          </li>
-          <li>
-            <div class="compare-icon">&#10003;</div>
-            <div>Visitors engage immediately on your site</div>
-          </li>
-          <li>
-            <div class="compare-icon">&#10003;</div>
-            <div>Full English and Spanish bilingual support</div>
-          </li>
-        </ul>
+    </div>
+    <div class="how-step">
+      <div class="how-num">2</div>
+      <div>
+        <h3>Customers click it and get instant help</h3>
+        <p>The AI answers questions about services, walks them through quotes, and provides contact info &mdash; all in real time.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">3</div>
+      <div>
+        <h3>You get more booked moves and fewer missed calls</h3>
+        <p>Every visitor who would have bounced now gets engaged. Every after-hours inquiry gets handled.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Service Flows -->
-<section class="flows">
-  <div class="flows-inner">
-    <div class="flows-header">
-      <h2>6 service flows, ready to go</h2>
-      <p>The bot is trained on Move Logistics services, pricing guidance, and contact information.</p>
-    </div>
-    <div class="flows-grid">
-      <div class="flow-card">
-        <div class="flow-emoji">&#128176;</div>
-        <h3>Get a Quote</h3>
-        <p>Walks customers through move type, date, home size, and special items &mdash; then connects them to your team.</p>
-      </div>
-      <div class="flow-card">
-        <div class="flow-emoji">&#127968;</div>
-        <h3>Local Moving</h3>
-        <p>Explains services included, San Antonio coverage areas, and why customers choose Move Logistics.</p>
-      </div>
-      <div class="flow-card">
-        <div class="flow-emoji">&#128666;</div>
-        <h3>Long Distance</h3>
-        <p>Covers USDOT licensing, all 48 states, and the full interstate moving process.</p>
-      </div>
-      <div class="flow-card">
-        <div class="flow-emoji">&#128230;</div>
-        <h3>Storage</h3>
-        <p>Climate-controlled and standard options, 24/7 security, short and long-term availability.</p>
-      </div>
-      <div class="flow-card">
-        <div class="flow-emoji">&#128230;</div>
-        <h3>Packing Services</h3>
-        <p>Full packing, partial packing, and supplies-only options with professional materials.</p>
-      </div>
-      <div class="flow-card">
-        <div class="flow-emoji">&#128222;</div>
-        <h3>Contact Us</h3>
-        <p>Phone, text, email, both office locations, and business hours &mdash; all at their fingertips.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Pilot Program -->
+<!-- Pilot CTA -->
 <section class="pilot">
-  <div class="pilot-inner">
-    <div class="pilot-badge">Pilot Program</div>
-    <h2>Try it free for 30 days</h2>
-    <p>No commitment. No risk. See the results for yourself.</p>
-    <div class="pilot-grid">
-      <div class="pilot-item">
-        <div class="pilot-item-icon">&#128197;</div>
-        <h4>30-Day Free Trial</h4>
-        <p>Full access, no charge</p>
-      </div>
-      <div class="pilot-item">
-        <div class="pilot-item-icon">&#128274;</div>
-        <h4>No Commitment</h4>
-        <p>Cancel anytime</p>
-      </div>
-      <div class="pilot-item">
-        <div class="pilot-item-icon">&#127912;</div>
-        <h4>Full Customization</h4>
-        <p>Your brand, your voice</p>
-      </div>
-      <div class="pilot-item">
-        <div class="pilot-item-icon">&#128736;</div>
-        <h4>We Handle Everything</h4>
-        <p>Setup, training, support</p>
-      </div>
-    </div>
-    <a href="mailto:paul@vantapointsystems.com" class="pilot-btn">Start Your Free Pilot</a>
+  <div class="pilot-box">
+    <h2>Free 30-Day Pilot</h2>
+    <p>No cost. No commitment. No risk. We install it on your site and you see the results. If it works, keep it. If not, no hard feelings.</p>
+    <a href="mailto:paul@vantapointsystems.com" class="pilot-btn">Get Started</a>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-name">Paul Rodriguez</div>
   <div class="footer-company">VantaPoint Systems</div>
+  <div class="footer-location">San Antonio, TX</div>
   <a href="mailto:paul@vantapointsystems.com" class="footer-email">paul@vantapointsystems.com</a>
-  <div class="footer-copy">&copy; 2025 VantaPoint Systems &mdash; San Antonio, TX</div>
 </footer>
 
 <script>
@@ -575,10 +478,10 @@
     widgetLoaded = true;
     var link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/widget.css?v=7';
+    link.href = '/widget.css?v=8';
     document.head.appendChild(link);
     var script = document.createElement('script');
-    script.src = '/widget.js?v=7';
+    script.src = '/widget.js?v=8';
     script.onload = function () {
       setTimeout(function () {
         var bubble = document.querySelector('.cps-chat-bubble');
