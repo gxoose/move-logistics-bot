@@ -228,31 +228,48 @@
 .cps-chat-header-right > * + * { margin-left: 8px; }
 
 .cps-lang-toggle {
-  background: rgba(255,255,255,0.15);
+  background: rgba(0,180,216,0.15);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 2px solid #00B4D8;
   color: #fff;
   font-size: 11px;
-  font-weight: 600;
-  padding: 3px 10px;
+  font-weight: 700;
+  padding: 3px 14px;
   border-radius: 12px;
   cursor: pointer;
   font-family: inherit;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
+  -webkit-transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
   -webkit-tap-highlight-color: transparent;
   min-height: 44px;
-  min-width: 44px;
+  min-width: 54px;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  box-shadow: 0 0 12px rgba(0,180,216,0.4), 0 0 24px rgba(0,180,216,0.15);
+  -webkit-animation: cps-lang-pulse 2.5s ease-in-out infinite;
+  animation: cps-lang-pulse 2.5s ease-in-out infinite;
 }
 
-.cps-lang-toggle:hover { background: rgba(255,255,255,0.3); }
+.cps-lang-toggle:hover {
+  background: rgba(0,180,216,0.3);
+  box-shadow: 0 0 18px rgba(0,180,216,0.6), 0 0 36px rgba(0,180,216,0.25);
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes cps-lang-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(0,180,216,0.4), 0 0 24px rgba(0,180,216,0.15); }
+  50%      { box-shadow: 0 0 18px rgba(0,180,216,0.6), 0 0 36px rgba(0,180,216,0.3); }
+}
+@keyframes cps-lang-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(0,180,216,0.4), 0 0 24px rgba(0,180,216,0.15); }
+  50%      { box-shadow: 0 0 18px rgba(0,180,216,0.6), 0 0 36px rgba(0,180,216,0.3); }
+}
 
 .cps-close-btn {
   background: none;

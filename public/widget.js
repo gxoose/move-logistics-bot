@@ -26,7 +26,7 @@
       welcome: "Hi! I'm your Move Logistics Assistant. How can I help with your move?",
       placeholder: 'Type your message...',
       error: "I'm sorry, I'm having trouble connecting. Please call Move Logistics at (210) 942-0357 for help.",
-      langButton: 'ES',
+      langButton: 'Español',
       mainMenu: 'Main Menu'
     },
     ES: {
@@ -35,7 +35,7 @@
       welcome: 'Hola! Soy su Asistente de Move Logistics. Como puedo ayudarle con su mudanza?',
       placeholder: 'Escriba su mensaje...',
       error: 'Lo siento, tengo problemas para conectarme. Llame a Move Logistics al (210) 942-0357.',
-      langButton: 'EN',
+      langButton: 'English',
       mainMenu: 'Menu Principal'
     }
   };
