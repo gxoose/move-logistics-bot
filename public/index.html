@@ -10,8 +10,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: #2D3436;
-      background: #F5F6FA;
+      color: #1A1A2E;
+      background: #F5F7FA;
       line-height: 1.6;
     }
 
@@ -19,7 +19,7 @@
 
     /* ===== Top Bar ===== */
     .top-bar {
-      background: #002266;
+      background: #0D2B45;
       color: rgba(255,255,255,0.8);
       font-size: 12px;
       padding: 6px 0;
@@ -29,11 +29,11 @@
       justify-content: flex-end;
       gap: 20px;
     }
-    .top-bar a:hover { color: #fff; }
+    .top-bar a:hover { color: #00B4D8; }
 
     /* ===== Header ===== */
     .site-header {
-      background: #003DA5;
+      background: #1B3A5C;
       color: #fff;
       padding: 0;
       position: sticky;
@@ -55,7 +55,7 @@
       align-items: center;
       gap: 10px;
     }
-    .logo svg { width: 28px; height: 28px; fill: #78BE20; }
+    .logo svg { width: 28px; height: 28px; fill: #00B4D8; }
     .nav-links {
       display: flex;
       gap: 28px;
@@ -68,11 +68,11 @@
       transition: color 0.2s;
       padding: 4px 0;
     }
-    .nav-links a:hover { color: #78BE20; }
+    .nav-links a:hover { color: #00B4D8; }
 
     /* ===== Hero ===== */
     .hero {
-      background: linear-gradient(135deg, #003DA5 0%, #0056D6 50%, #003DA5 100%);
+      background: linear-gradient(135deg, #0D2B45 0%, #1B3A5C 50%, #2A5078 100%);
       color: #fff;
       text-align: center;
       padding: 80px 20px 88px;
@@ -92,7 +92,7 @@
     }
     .hero-btn {
       display: inline-block;
-      background: #78BE20;
+      background: #00B4D8;
       color: #fff;
       font-size: 15px;
       font-weight: 600;
@@ -100,7 +100,7 @@
       border-radius: 6px;
       transition: background 0.2s;
     }
-    .hero-btn:hover { background: #6aaa1a; }
+    .hero-btn:hover { background: #0096B7; }
 
     /* ===== Cards ===== */
     .cards-section {
@@ -118,32 +118,34 @@
       border-radius: 12px;
       padding: 32px 24px;
       text-align: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 8px rgba(27,58,92,0.06);
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 28px rgba(27,58,92,0.12);
     }
     .card-icon {
       width: 56px;
       height: 56px;
-      background: #EBF0FA;
+      background: rgba(0,180,216,0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 16px;
     }
-    .card-icon svg { width: 26px; height: 26px; fill: #003DA5; }
+    .card-icon svg { width: 26px; height: 26px; fill: #00B4D8; }
     .card h3 {
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 8px;
+      color: #1B3A5C;
     }
     .card p {
       font-size: 13px;
-      color: #636E72;
+      color: #6B7B8D;
       line-height: 1.5;
     }
 
@@ -160,10 +162,11 @@
     .info-bar h2 {
       font-size: 22px;
       margin-bottom: 8px;
+      color: #1B3A5C;
     }
     .info-bar p {
       font-size: 14px;
-      color: #636E72;
+      color: #6B7B8D;
       margin-bottom: 20px;
     }
     .info-stats {
@@ -175,17 +178,17 @@
     .stat-number {
       font-size: 28px;
       font-weight: 700;
-      color: #003DA5;
+      color: #00B4D8;
     }
     .stat-label {
       font-size: 12px;
-      color: #636E72;
+      color: #6B7B8D;
       margin-top: 2px;
     }
 
     /* ===== Footer ===== */
     .site-footer {
-      background: #1a1a2e;
+      background: #0D2B45;
       color: rgba(255,255,255,0.75);
       padding: 40px 20px 24px;
       font-size: 13px;
@@ -210,9 +213,9 @@
       color: rgba(255,255,255,0.65);
       transition: color 0.2s;
     }
-    .footer-col a:hover { color: #78BE20; }
+    .footer-col a:hover { color: #00B4D8; }
     .footer-col .phone {
-      color: #78BE20;
+      color: #00B4D8;
       font-weight: 600;
       font-size: 15px;
     }
@@ -253,8 +256,8 @@
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container">
-      <a href="#">My Account</a>
-      <a href="#">Outage Map</a>
+      <a href="#">Get a Quote</a>
+      <a href="#">Storage</a>
       <a href="#">Contact Us</a>
     </div>
   </div>
@@ -263,7 +266,7 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <svg viewBox="0 0 24 24"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM19.5 9.5L21 12h-3v-2.5h1.5zM6 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
         Move Logistics
       </div>
       <ul class="nav-links">
@@ -288,28 +291,28 @@
     <div class="cards-grid">
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zm-6-1h4v-2h-4v2zm-8-4h10v-2H6v2zm0-4h10V7H6v2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
         </div>
         <h3>Local Moving</h3>
         <p>Professional movers with 5+ years experience for homes, apartments, and condos across San Antonio.</p>
       </div>
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM19.5 9.5L21 12h-3v-2.5h1.5zM6 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
         </div>
         <h3>Long Distance</h3>
         <p>Licensed interstate moving to all 48 states. USDOT &amp; MC certified for safe, reliable transport.</p>
       </div>
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-7-2h2v-4h4v-2h-4V7h-2v4H8v2h4v4z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/></svg>
         </div>
         <h3>Storage</h3>
         <p>Climate-controlled and standard storage units with 24/7 security monitoring. Short and long term.</p>
       </div>
       <div class="card">
         <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 11h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11V12z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.5 14H15v-4h-2.5L15 9h-1.5l-2.5 4h2.5l-2.5 4h4.5z"/></svg>
         </div>
         <h3>Packing Services</h3>
         <p>Full and partial packing by experienced professionals. We bring all materials and handle everything.</p>
@@ -348,7 +351,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Contact Us</h4>
-        <p>Call: (210) 942-0357</p>
+        <p class="phone">(210) 348-6683</p>
         <p>Text: (210) 838-7682</p>
         <p>Email: marc@movelogistics.net</p>
         <p>Mon-Fri 7am-5pm, Sat 7am-2pm</p>

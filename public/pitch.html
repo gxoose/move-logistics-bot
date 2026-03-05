@@ -12,7 +12,7 @@
 
   body {
     font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: #2D3436;
+    color: #1A1A2E;
     background: #fff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -30,7 +30,7 @@
     justify-content: space-between;
     padding: 0 40px;
     height: 64px;
-    background: rgba(0, 20, 60, 0.9);
+    background: rgba(13, 43, 69, 0.95);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -50,7 +50,7 @@
     justify-content: center;
     width: 30px;
     height: 30px;
-    background: #F5A623;
+    background: #00B4D8;
     border-radius: 8px;
     font-size: 16px;
   }
@@ -71,7 +71,7 @@
 
   /* ===== Hero ===== */
   .hero {
-    background: linear-gradient(160deg, #00143c 0%, #003DA5 45%, #0056D6 100%);
+    background: linear-gradient(160deg, #0D2B45 0%, #1B3A5C 45%, #2A5078 100%);
     color: #fff;
     text-align: center;
     padding: 160px 24px 100px;
@@ -86,9 +86,9 @@
     right: 0;
     bottom: 0;
     background:
-      radial-gradient(ellipse at 20% 80%, rgba(245,166,35,0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(0,102,255,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 50%, rgba(120,190,32,0.05) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 80%, rgba(0,180,216,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(0,150,183,0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(42,80,120,0.06) 0%, transparent 60%);
     pointer-events: none;
   }
   .hero-content {
@@ -106,13 +106,13 @@
     margin-bottom: 24px;
   }
   .hero h1 span {
-    color: #F5A623;
+    color: #00B4D8;
   }
   .hero-sub {
     font-size: 20px;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.7);
     max-width: 540px;
-    margin: 0 auto 44px;
+    margin: 0 auto 12px;
     line-height: 1.6;
     font-weight: 400;
   }
@@ -120,10 +120,17 @@
     color: #fff;
     font-weight: 600;
   }
+  .hero-tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #00B4D8;
+    margin-bottom: 44px;
+  }
   .launch-btn {
     display: inline-block;
-    background: #F5A623;
-    color: #00143c;
+    background: #00B4D8;
+    color: #fff;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 22px;
     letter-spacing: 2px;
@@ -133,12 +140,12 @@
     cursor: pointer;
     text-decoration: none;
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    box-shadow: 0 4px 24px rgba(245,166,35,0.4);
+    box-shadow: 0 4px 24px rgba(0,180,216,0.4);
   }
   .launch-btn:hover {
-    background: #e69a1e;
+    background: #0096B7;
     transform: translateY(-2px);
-    box-shadow: 0 8px 36px rgba(245,166,35,0.5);
+    box-shadow: 0 8px 36px rgba(0,180,216,0.5);
   }
   .launch-btn:active {
     transform: translateY(0);
@@ -146,12 +153,12 @@
   .hero-note {
     margin-top: 20px;
     font-size: 13px;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.35);
   }
 
   /* ===== Stats ===== */
   .stats {
-    background: #00143c;
+    background: #0D2B45;
     padding: 0 24px;
   }
   .stats-inner {
@@ -170,14 +177,14 @@
   .stat-number {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 44px;
-    color: #F5A623;
+    color: #fff;
     line-height: 1;
     margin-bottom: 6px;
     letter-spacing: 1px;
   }
   .stat-label {
     font-size: 13px;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.45);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -186,7 +193,7 @@
   /* ===== Features ===== */
   .features {
     padding: 88px 24px;
-    background: #FAFBFC;
+    background: #F5F7FA;
   }
   .features-inner {
     max-width: 1000px;
@@ -200,12 +207,12 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
     letter-spacing: 2px;
-    color: #00143c;
+    color: #1B3A5C;
     margin-bottom: 12px;
   }
   .features-header p {
     font-size: 17px;
-    color: #636E72;
+    color: #6B7B8D;
     max-width: 500px;
     margin: 0 auto;
   }
@@ -218,12 +225,12 @@
     background: #fff;
     border-radius: 14px;
     padding: 32px 24px;
-    border: 1px solid #EAEEF3;
+    border: 1px solid #E2E8F0;
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .f-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0,61,165,0.08);
+    box-shadow: 0 12px 32px rgba(27,58,92,0.1);
   }
   .f-icon {
     width: 48px;
@@ -234,25 +241,24 @@
     justify-content: center;
     font-size: 22px;
     margin-bottom: 16px;
+    background: rgba(0,180,216,0.1);
+    color: #00B4D8;
   }
-  .f-icon-blue { background: #EBF0FA; }
-  .f-icon-green { background: #EDF8E8; }
-  .f-icon-gold { background: #FFF6E5; }
   .f-card h3 {
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #1a1a2e;
+    color: #1B3A5C;
   }
   .f-card p {
     font-size: 14px;
-    color: #636E72;
+    color: #6B7B8D;
     line-height: 1.55;
   }
 
   /* ===== CTA ===== */
   .cta {
-    background: linear-gradient(160deg, #00143c 0%, #003DA5 100%);
+    background: linear-gradient(160deg, #0D2B45 0%, #1B3A5C 100%);
     color: #fff;
     text-align: center;
     padding: 88px 24px;
@@ -269,7 +275,7 @@
   }
   .cta p {
     font-size: 17px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.55);
     margin-bottom: 36px;
     max-width: 460px;
     margin-left: auto;
@@ -281,10 +287,10 @@
     justify-content: center;
     flex-wrap: wrap;
   }
-  .cta-gold {
+  .cta-teal {
     display: inline-block;
-    background: #F5A623;
-    color: #00143c;
+    background: #00B4D8;
+    color: #fff;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
@@ -292,9 +298,9 @@
     border-radius: 8px;
     text-decoration: none;
     transition: background 0.2s;
-    box-shadow: 0 4px 20px rgba(245,166,35,0.35);
+    box-shadow: 0 4px 20px rgba(0,180,216,0.35);
   }
-  .cta-gold:hover { background: #e69a1e; }
+  .cta-teal:hover { background: #0096B7; }
   .cta-outline {
     display: inline-block;
     border: 1px solid rgba(255,255,255,0.3);
@@ -311,7 +317,7 @@
 
   /* ===== Footer ===== */
   .footer {
-    background: #0a0a1a;
+    background: #0D2B45;
     color: rgba(255,255,255,0.35);
     text-align: center;
     padding: 24px;
@@ -321,7 +327,7 @@
     color: rgba(255,255,255,0.5);
     text-decoration: none;
   }
-  .footer a:hover { color: #F5A623; }
+  .footer a:hover { color: #00B4D8; }
 
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
@@ -358,6 +364,7 @@
   <div class="hero-content">
     <h1>YOUR MOVE DESERVES <span>INSTANT ANSWERS</span></h1>
     <p class="hero-sub">An AI assistant built for Move Logistics. Click below to try it &mdash; <strong>live, right now.</strong></p>
+    <p class="hero-tagline">ANYWHERE YOU NEED TO BE</p>
     <button type="button" class="launch-btn" id="launchBtn">LAUNCH LIVE DEMO</button>
     <p class="hero-note">No login required. Fully functional demo.</p>
   </div>
@@ -394,32 +401,32 @@
     </div>
     <div class="features-grid">
       <div class="f-card">
-        <div class="f-icon f-icon-gold">&#128203;</div>
+        <div class="f-icon">&#128176;</div>
         <h3>Get a Quote</h3>
         <p>Walks customers through the quote process step by step &mdash; move type, date, home size, and special items &mdash; then connects them with your team.</p>
       </div>
       <div class="f-card">
-        <div class="f-icon f-icon-blue">&#127968;</div>
+        <div class="f-icon">&#127968;</div>
         <h3>Local Moving</h3>
         <p>Explains what's included in local moves, service areas across San Antonio, and why customers choose Move Logistics.</p>
       </div>
       <div class="f-card">
-        <div class="f-icon f-icon-green">&#128666;</div>
+        <div class="f-icon">&#128666;</div>
         <h3>Long Distance</h3>
         <p>Covers interstate licensing, destinations served nationwide, and the full long-distance moving process from start to finish.</p>
       </div>
       <div class="f-card">
-        <div class="f-icon f-icon-blue">&#128230;</div>
+        <div class="f-icon">&#128230;</div>
         <h3>Storage</h3>
         <p>Details climate-controlled and standard storage options, 24/7 security monitoring, and flexible short or long-term availability.</p>
       </div>
       <div class="f-card">
-        <div class="f-icon f-icon-green">&#128230;</div>
+        <div class="f-icon">&#128230;</div>
         <h3>Packing Services</h3>
         <p>Presents full packing, partial packing, and supplies-only options. Highlights professional materials and experienced packers.</p>
       </div>
       <div class="f-card">
-        <div class="f-icon f-icon-gold">&#128222;</div>
+        <div class="f-icon">&#128222;</div>
         <h3>Contact Us</h3>
         <p>Provides phone, text, email, office locations, and business hours. Connects customers to the right person instantly.</p>
       </div>
@@ -432,7 +439,7 @@
   <h2>EVERY MISSED CALL IS A MISSED MOVE</h2>
   <p>Let AI answer your customers instantly so your team can focus on delivering great moves.</p>
   <div class="cta-buttons">
-    <a href="#" class="cta-gold" id="launchBtn2">LAUNCH LIVE DEMO</a>
+    <a href="#" class="cta-teal" id="launchBtn2">LAUNCH LIVE DEMO</a>
     <a href="mailto:paul@vantapointsystems.com" class="cta-outline" id="contactBtn">GET IN TOUCH</a>
   </div>
 </section>

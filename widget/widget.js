@@ -46,7 +46,7 @@
 
   var MENU = [
     {
-      id: 'quote', emoji: '\uD83D\uDCCB', label: 'Get a Quote', es: 'Cotizacion',
+      id: 'quote', emoji: '\uD83D\uDCB0', label: 'Get a Quote', es: 'Cotizacion',
       directMsg: 'I would like to get a free moving quote.', directMsgEs: 'Me gustaria obtener una cotizacion gratuita para mi mudanza.',
       subs: [
         { label: 'Local Move', es: 'Mudanza Local', msg: 'I need a quote for a local move in the San Antonio area.', msgEs: 'Necesito una cotizacion para una mudanza local en el area de San Antonio.' },
@@ -106,8 +106,8 @@
   var ICON_SEND =
     '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#ffffff;display:block;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>';
 
-  var ICON_BOLT =
-    '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#ffffff;display:block;"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>';
+  var ICON_TRUCK =
+    '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#ffffff;display:block;"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>';
 
   /* ===========================
      DOM References
@@ -163,7 +163,7 @@
 
     var headerIcon = document.createElement('div');
     headerIcon.className = 'cps-header-icon';
-    headerIcon.innerHTML = ICON_BOLT;
+    headerIcon.innerHTML = ICON_TRUCK;
 
     var headerText = document.createElement('div');
     headerTitle = document.createElement('div');
