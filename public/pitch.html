@@ -108,8 +108,55 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 32px rgba(0,180,216,0.35);
   }
+  .hero-btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #00B4D8;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 8px;
+    border: 2px solid #00B4D8;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    letter-spacing: 0.3px;
+    margin-bottom: 14px;
+  }
+  .hero-btn-outline:hover {
+    background: #00B4D8;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,180,216,0.08);
+    border: 1px solid rgba(0,180,216,0.2);
+    color: #00B4D8;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+  .hero-trained {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6B7B8D;
+    font-style: italic;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .hero-note {
-    margin-top: 14px;
+    margin-top: 8px;
     font-size: 13px;
     color: #B0BEC5;
   }
@@ -170,6 +217,15 @@
     font-size: 15px;
     color: #6B7B8D;
     line-height: 1.65;
+  }
+  .solve-outcome {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #00B4D8;
+    padding-top: 10px;
+    border-top: 1px solid #E2E8F0;
   }
 
   /* ===== What It Handles ===== */
@@ -350,31 +406,40 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-for">Prepared for Move Logistics</div>
-  <h1>Built for Move Logistics</h1>
-  <div class="hero-tagline">ANYWHERE YOU NEED TO BE</div>
-  <p class="hero-sub">We built an AI assistant that answers your customers' questions instantly, gets quotes started, and works 24/7 in English and Spanish. Try it right now.</p>
+  <h1>Stop losing moving jobs to missed calls.</h1>
+  <p class="hero-sub">An AI assistant that answers 24/7, starts quotes, and speaks English and Spanish &mdash; live on your website.</p>
+  <div class="hero-badges">
+    <span class="hero-badge">&#127760; English + Spanish</span>
+    <span class="hero-badge">&#128338; 24/7 Coverage</span>
+    <span class="hero-badge">&#9889; Instant Responses</span>
+  </div>
+  <a href="mailto:paul@vantapointsystems.com" class="hero-btn-outline">Book a 15-Minute Demo</a><br>
   <button type="button" class="hero-btn" id="launchBtn">LAUNCH LIVE DEMO</button>
   <p class="hero-note">No login required. This is a fully working demo.</p>
+  <p class="hero-trained">This demo is trained specifically on Move Logistics services, locations, and policies &mdash; not generic moving data.</p>
 </section>
 
 <!-- What This Solves -->
 <section class="solves">
   <div class="section-header">
     <h2>What This Solves</h2>
-    <p>Three problems every moving company faces.</p>
+    <p>Three problems every moving company faces &mdash; and your AI assistant solves on day one.</p>
   </div>
   <div class="solves-grid">
     <div class="solve-card">
       <h3><span class="solve-dot"></span> Missed Calls</h3>
       <p>Your team can't answer every call. The bot handles overflow 24/7 &mdash; so no customer goes unanswered.</p>
+      <span class="solve-outcome">Reduce missed calls by up to 60%.</span>
     </div>
     <div class="solve-card">
       <h3><span class="solve-dot"></span> Repeat Questions</h3>
       <p>"How much does a move cost?" and "Do you move long distance?" get answered instantly &mdash; without tying up your staff.</p>
+      <span class="solve-outcome">Free your team to focus on booked moves, not answering the same questions.</span>
     </div>
     <div class="solve-card">
       <h3><span class="solve-dot"></span> After Hours</h3>
       <p>Customers searching at 11pm get help immediately instead of waiting until morning. The bot never clocks out.</p>
+      <span class="solve-outcome">Turn late-night website visitors into morning quote requests.</span>
     </div>
   </div>
 </section>
@@ -430,21 +495,21 @@
       <div class="how-num">1</div>
       <div>
         <h3>We add a chat widget to movelogistics.net</h3>
-        <p>A small snippet of code &mdash; takes minutes to install. We handle the entire setup.</p>
+        <p><strong>One line of code.</strong> We handle the entire setup &mdash; takes minutes to install.</p>
       </div>
     </div>
     <div class="how-step">
       <div class="how-num">2</div>
       <div>
-        <h3>Customers click it and get instant help</h3>
-        <p>The AI answers questions about services, walks them through quotes, and provides contact info &mdash; all in real time.</p>
+        <h3>Customers get instant help with quotes, services, and scheduling</h3>
+        <p><strong>No more voicemail tag.</strong> The AI answers in real time, walks them through quotes, and provides contact info.</p>
       </div>
     </div>
     <div class="how-step">
       <div class="how-num">3</div>
       <div>
         <h3>You get more booked moves and fewer missed calls</h3>
-        <p>Every visitor who would have bounced now gets engaged. Every after-hours inquiry gets handled.</p>
+        <p><strong>Starting week one.</strong> Every visitor who would have bounced now gets engaged. Every after-hours inquiry gets handled.</p>
       </div>
     </div>
   </div>
@@ -454,7 +519,7 @@
 <section class="pilot">
   <div class="pilot-box">
     <h2>Free 30-Day Pilot</h2>
-    <p>No cost. No commitment. No risk. We install it on your site and you see the results. If it works, keep it. If not, no hard feelings.</p>
+    <p>No cost. No commitment. No risk. If you don't see more quote requests and fewer missed calls in 30 days, you simply turn it off.</p>
     <a href="mailto:paul@vantapointsystems.com" class="pilot-btn">Get Started</a>
   </div>
 </section>
