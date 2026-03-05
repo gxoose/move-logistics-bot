@@ -189,36 +189,22 @@
 .cps-chat-header-left {
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
+  gap: 2px;
 }
 
-.cps-chat-header-left > * + * { margin-left: 10px; }
-
-.cps-header-icon {
-  width: 42px;
-  height: 42px;
-  background: #fff;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.3);
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-.cps-header-logo {
-  width: 36px;
-  height: 36px;
+.cps-header-banner-logo {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
   object-fit: contain;
   display: block;
+  filter: brightness(0) invert(1);
 }
 
 .cps-chat-header-title { font-size: 15px; font-weight: 600; line-height: 1.2; }
@@ -468,10 +454,15 @@
   transform: scale(0.97);
 }
 
-.cps-menu-emoji {
+.cps-menu-icon {
   display: block;
-  font-size: 20px;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
+  line-height: 0;
+}
+.cps-menu-icon svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
 }
 
 /* ===========================

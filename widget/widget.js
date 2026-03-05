@@ -46,7 +46,7 @@
 
   var MENU = [
     {
-      id: 'quote', emoji: '\uD83D\uDCB0', label: 'Get a Quote', es: 'Cotizacion',
+      id: 'quote', label: 'Get a Quote', es: 'Cotizacion',
       directMsg: 'I would like to get a free moving quote.', directMsgEs: 'Me gustaria obtener una cotizacion gratuita para mi mudanza.',
       subs: [
         { label: 'Local Move', es: 'Mudanza Local', msg: 'I need a quote for a local move in the San Antonio area.', msgEs: 'Necesito una cotizacion para una mudanza local en el area de San Antonio.' },
@@ -55,7 +55,7 @@
       ]
     },
     {
-      id: 'local', emoji: '\uD83C\uDFE0', label: 'Local Moving', es: 'Mudanza Local',
+      id: 'local', label: 'Local Moving', es: 'Mudanza Local',
       subs: [
         { label: 'What\'s Included', es: 'Que Incluye', msg: 'What is included in your local moving service?', msgEs: 'Que incluye su servicio de mudanza local?' },
         { label: 'Service Area', es: 'Area de Servicio', msg: 'What areas do you serve for local moves?', msgEs: 'Que areas cubren para mudanzas locales?' },
@@ -63,7 +63,7 @@
       ]
     },
     {
-      id: 'longdistance', emoji: '\uD83D\uDE9A', label: 'Long Distance', es: 'Larga Distancia',
+      id: 'longdistance', label: 'Long Distance', es: 'Larga Distancia',
       subs: [
         { label: 'How It Works', es: 'Como Funciona', msg: 'How does your long distance moving service work?', msgEs: 'Como funciona su servicio de mudanza de larga distancia?' },
         { label: 'Destinations', es: 'Destinos', msg: 'What states and cities do you move to for long distance?', msgEs: 'A que estados y ciudades se mudan para larga distancia?' },
@@ -71,7 +71,7 @@
       ]
     },
     {
-      id: 'storage', emoji: '\uD83D\uDCE6', label: 'Storage', es: 'Almacenamiento',
+      id: 'storage', label: 'Storage', es: 'Almacenamiento',
       subs: [
         { label: 'Climate Controlled', es: 'Climatizado', msg: 'Tell me about your climate-controlled storage options.', msgEs: 'Cuentame sobre sus opciones de almacenamiento climatizado.' },
         { label: 'Short & Long Term', es: 'Corto y Largo Plazo', msg: 'Do you offer both short-term and long-term storage?', msgEs: 'Ofrecen almacenamiento a corto y largo plazo?' },
@@ -79,7 +79,7 @@
       ]
     },
     {
-      id: 'packing', emoji: '\uD83D\uDCE5', label: 'Packing Services', es: 'Empaque',
+      id: 'packing', label: 'Packing Services', es: 'Empaque',
       subs: [
         { label: 'Full Packing', es: 'Empaque Completo', msg: 'Tell me about your full packing service.', msgEs: 'Cuentame sobre su servicio de empaque completo.' },
         { label: 'Partial Packing', es: 'Empaque Parcial', msg: 'Do you offer partial packing where you only pack some items?', msgEs: 'Ofrecen empaque parcial donde solo empacan algunos articulos?' },
@@ -87,7 +87,7 @@
       ]
     },
     {
-      id: 'contact', emoji: '\uD83D\uDCDE', label: 'Contact Us', es: 'Contactenos',
+      id: 'contact', label: 'Contact Us', es: 'Contactenos',
       subs: [
         { label: 'Phone & Text', es: 'Telefono y Texto', msg: 'What is the Move Logistics phone number?', msgEs: 'Cual es el numero de telefono de Move Logistics?' },
         { label: 'Locations', es: 'Ubicaciones', msg: 'Where are your office locations?', msgEs: 'Donde estan sus oficinas?' },
@@ -106,8 +106,18 @@
   var ICON_SEND =
     '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#ffffff;display:block;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>';
 
-  var ICON_TRUCK =
-    '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#ffffff;display:block;"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>';
+  /* ===========================
+     Menu SVG Icons (teal line-art, 36px)
+     =========================== */
+
+  var MENU_ICONS = {
+    quote: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;display:block;" fill="none" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>',
+    local: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;display:block;" fill="none" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-8 9 8"/><path d="M5 10v9a1 1 0 001 1h12a1 1 0 001-1v-9"/><path d="M14 16l3 0m-3 0l0-3"/></svg>',
+    longdistance: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;display:block;" fill="none" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 17h2m14 0h2l3-4V9h-4V5H3a2 2 0 00-2 2v10"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/><path d="M8 17h6"/></svg>',
+    storage: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;display:block;" fill="none" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20M2 16h20"/><path d="M10 10v6"/></svg>',
+    packing: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;display:block;" fill="none" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8V21H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>',
+    contact: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;display:block;" fill="none" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>'
+  };
 
   /* ===========================
      DOM References
@@ -173,26 +183,18 @@
     var headerLeft = document.createElement('div');
     headerLeft.className = 'cps-chat-header-left';
 
-    var headerIcon = document.createElement('div');
-    headerIcon.className = 'cps-header-icon';
     var logoImg = document.createElement('img');
     logoImg.src = 'https://movelogistics.net/wp-content/uploads/2020/03/move-logistics-moving-company-logo-60.png';
     logoImg.alt = 'Move Logistics';
-    logoImg.className = 'cps-header-logo';
-    headerIcon.appendChild(logoImg);
+    logoImg.className = 'cps-header-banner-logo';
+    headerLeft.appendChild(logoImg);
 
-    var headerText = document.createElement('div');
     headerTitle = document.createElement('div');
-    headerTitle.className = 'cps-chat-header-title';
-    headerTitle.textContent = TEXT[lang].title;
+    headerTitle.style.display = 'none';
     headerSubtitle = document.createElement('div');
     headerSubtitle.className = 'cps-chat-header-subtitle';
     headerSubtitle.textContent = TEXT[lang].subtitle;
-
-    headerText.appendChild(headerTitle);
-    headerText.appendChild(headerSubtitle);
-    headerLeft.appendChild(headerIcon);
-    headerLeft.appendChild(headerText);
+    headerLeft.appendChild(headerSubtitle);
 
     var headerRight = document.createElement('div');
     headerRight.className = 'cps-chat-header-right';
@@ -603,10 +605,10 @@
         card.setAttribute('tabindex', '0');
         card.style.cssText = '-webkit-animation-delay:' + (idx * 0.04) + 's;animation-delay:' + (idx * 0.04) + 's;';
 
-        var emojiSpan = document.createElement('span');
-        emojiSpan.className = 'cps-menu-emoji';
-        emojiSpan.textContent = cat.emoji;
-        card.appendChild(emojiSpan);
+        var iconSpan = document.createElement('span');
+        iconSpan.className = 'cps-menu-icon';
+        iconSpan.innerHTML = MENU_ICONS[cat.id] || '';
+        card.appendChild(iconSpan);
 
         var labelText = lang === 'ES' && cat.es ? cat.es : cat.label;
         var labelNode = document.createTextNode(labelText);
@@ -620,11 +622,11 @@
           currentCategory = cat.id;
 
           if (cat.directMsg) {
-            addUserMessage(cat.emoji + ' ' + labelText);
+            addUserMessage(labelText);
             var apiMsg = lang === 'ES' && cat.directMsgEs ? cat.directMsgEs : cat.directMsg;
             sendMessage(apiMsg, true);
           } else {
-            addUserMessage(cat.emoji + ' ' + labelText);
+            addUserMessage(labelText);
             showTypingThen(400, function () {
               renderSubOptions(cat);
             });
