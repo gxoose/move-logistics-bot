@@ -198,11 +198,11 @@
 .cps-chat-header-left > * + * { margin-left: 10px; }
 
 .cps-header-icon {
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   background: #fff;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 2px solid rgba(255,255,255,0.3);
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -215,8 +215,8 @@
 }
 
 .cps-header-logo {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   display: block;
 }
