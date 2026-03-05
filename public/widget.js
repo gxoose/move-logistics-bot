@@ -116,6 +116,9 @@
   var bubble, chatWindow, messagesEl, inputEl, sendBtn, typingEl, langBtn;
   var headerTitle, headerSubtitle;
   var tooltip;
+  var isDragging = false;
+  var dragOffsetX = 0;
+  var dragOffsetY = 0;
 
   /* ===========================
      Build DOM
@@ -249,6 +252,66 @@
     chatWindow.appendChild(messagesEl);
     chatWindow.appendChild(inputArea);
     document.body.appendChild(chatWindow);
+
+    /* Drag support — drag chat window by header bar */
+    setupDrag(header, headerRight);
+  }
+
+  /* ===========================
+     Draggable Header
+     =========================== */
+
+  function setupDrag(header, headerRight) {
+    function isDragTarget(el) {
+      while (el && el !== header) {
+        if (el.tagName === 'BUTTON' || el === headerRight) return false;
+        el = el.parentNode;
+      }
+      return el === header;
+    }
+
+    function onDragStart(e) {
+      if (window.innerWidth <= 768) return;
+      if (!isDragTarget(e.target)) return;
+      isDragging = true;
+      var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      var rect = chatWindow.getBoundingClientRect();
+      dragOffsetX = clientX - rect.left;
+      dragOffsetY = clientY - rect.top;
+      header.classList.add('cps-dragging');
+      e.preventDefault();
+    }
+
+    function onDragMove(e) {
+      if (!isDragging) return;
+      var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      var newLeft = clientX - dragOffsetX;
+      var newTop = clientY - dragOffsetY;
+      var maxLeft = window.innerWidth - chatWindow.offsetWidth;
+      var maxTop = window.innerHeight - chatWindow.offsetHeight;
+      newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+      newTop = Math.max(0, Math.min(newTop, maxTop));
+      chatWindow.style.left = newLeft + 'px';
+      chatWindow.style.top = newTop + 'px';
+      chatWindow.style.right = 'auto';
+      chatWindow.style.bottom = 'auto';
+      e.preventDefault();
+    }
+
+    function onDragEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      header.classList.remove('cps-dragging');
+    }
+
+    header.addEventListener('mousedown', onDragStart);
+    document.addEventListener('mousemove', onDragMove);
+    document.addEventListener('mouseup', onDragEnd);
+    header.addEventListener('touchstart', onDragStart, { passive: false });
+    document.addEventListener('touchmove', onDragMove, { passive: false });
+    document.addEventListener('touchend', onDragEnd);
   }
 
   function rebuildTypingIndicator() {
