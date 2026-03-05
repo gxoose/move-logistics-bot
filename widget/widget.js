@@ -115,6 +115,7 @@
 
   var bubble, chatWindow, messagesEl, inputEl, sendBtn, typingEl, langBtn;
   var headerTitle, headerSubtitle;
+  var tooltip;
 
   /* ===========================
      Build DOM
@@ -123,6 +124,7 @@
   function init() {
     injectStylesheet();
     buildBubble();
+    buildTooltip();
     buildChatWindow();
   }
 
@@ -146,6 +148,13 @@
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleChat(); }
     });
     document.body.appendChild(bubble);
+  }
+
+  function buildTooltip() {
+    tooltip = document.createElement('div');
+    tooltip.className = 'cps-chat-tooltip';
+    tooltip.textContent = 'Chat with us!';
+    document.body.appendChild(tooltip);
   }
 
   function buildChatWindow() {
@@ -778,6 +787,7 @@
     isOpen = !isOpen;
     chatWindow.classList.toggle('open', isOpen);
     bubble.classList.toggle('hidden', isOpen);
+    if (tooltip) tooltip.classList.toggle('hidden', isOpen);
 
     if (isOpen) {
       if (!hasShownWelcome) {

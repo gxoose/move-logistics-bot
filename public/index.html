@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Move Logistics - San Antonio Moving Company</title>
-  <link rel="stylesheet" href="widget.css?v=5">
+  <title>Move Logistics - San Antonio Moving Company | Local & Long Distance Movers</title>
+  <link rel="stylesheet" href="widget.css?v=6">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       color: #1A1A2E;
-      background: #F5F7FA;
+      background: #fff;
       line-height: 1.6;
     }
 
@@ -26,9 +26,18 @@
     }
     .top-bar .container {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-left {
+      display: flex;
       gap: 20px;
     }
+    .top-bar-right {
+      display: flex;
+      gap: 20px;
+    }
+    .top-bar a { transition: color 0.2s; }
     .top-bar a:hover { color: #00B4D8; }
 
     /* ===== Header ===== */
@@ -39,23 +48,32 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
     }
     .site-header .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 72px;
     }
     .logo {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.5px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
-    .logo svg { width: 28px; height: 28px; fill: #00B4D8; }
+    .logo svg { width: 32px; height: 32px; fill: #00B4D8; }
+    .logo-text-sub {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-top: -2px;
+    }
     .nav-links {
       display: flex;
       gap: 28px;
@@ -69,164 +87,455 @@
       padding: 4px 0;
     }
     .nav-links a:hover { color: #00B4D8; }
+    .nav-cta {
+      background: #00B4D8 !important;
+      color: #fff !important;
+      padding: 8px 20px !important;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: #0096B7 !important; }
 
-    /* ===== Hero ===== */
+    /* ===== Hero — Full Width with Overlay ===== */
     .hero {
-      background: linear-gradient(135deg, #0D2B45 0%, #1B3A5C 50%, #2A5078 100%);
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(13,43,69,0.92) 0%, rgba(27,58,92,0.88) 40%, rgba(42,80,120,0.85) 100%),
+        linear-gradient(180deg, #0D2B45 0%, #1B3A5C 50%, #2A5078 100%);
+      background-size: cover;
       color: #fff;
-      text-align: center;
-      padding: 80px 20px 88px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(0,180,216,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(0,180,216,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .hero-content {
+      max-width: 560px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(0,180,216,0.15);
+      border: 1px solid rgba(0,180,216,0.3);
+      color: #00B4D8;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: 36px;
-      font-weight: 700;
-      max-width: 700px;
-      margin: 0 auto 16px;
-      line-height: 1.25;
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
     }
+    .hero h1 span { color: #00B4D8; }
     .hero p {
       font-size: 17px;
       opacity: 0.9;
-      max-width: 560px;
-      margin: 0 auto 32px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
     .hero-btn {
       display: inline-block;
-      background: #00B4D8;
-      color: #fff;
       font-size: 15px;
       font-weight: 600;
-      padding: 12px 32px;
+      padding: 14px 32px;
       border-radius: 6px;
-      transition: background 0.2s;
+      transition: all 0.2s;
+      cursor: pointer;
     }
-    .hero-btn:hover { background: #0096B7; }
+    .hero-btn-primary {
+      background: #00B4D8;
+      color: #fff;
+    }
+    .hero-btn-primary:hover { background: #0096B7; box-shadow: 0 4px 20px rgba(0,180,216,0.4); }
+    .hero-btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+    .hero-btn-outline:hover { border-color: #00B4D8; color: #00B4D8; }
 
-    /* ===== Cards ===== */
-    .cards-section {
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: #00B4D8;
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    /* Hero Right — Floating Truck Graphic */
+    .hero-graphic {
+      flex-shrink: 0;
+      width: 320px;
+      height: 320px;
+      background: rgba(0,180,216,0.08);
+      border-radius: 50%;
+      border: 1px solid rgba(0,180,216,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-graphic svg {
+      width: 160px;
+      height: 160px;
+      fill: rgba(0,180,216,0.25);
+    }
+    .hero-graphic::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 1px dashed rgba(0,180,216,0.12);
+    }
+
+    /* ===== Services Section ===== */
+    .services-section {
+      padding: 80px 20px;
+      background: #F5F7FA;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1B3A5C;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: #6B7B8D;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+    .services-grid {
       max-width: 1100px;
-      margin: -48px auto 60px;
-      padding: 0 20px;
-    }
-    .cards-grid {
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
-    .card {
+    .service-card {
       background: #fff;
       border-radius: 12px;
-      padding: 32px 24px;
-      text-align: center;
+      padding: 36px 28px;
       border: 1px solid #E2E8F0;
-      box-shadow: 0 2px 8px rgba(27,58,92,0.06);
+      box-shadow: 0 2px 8px rgba(27,58,92,0.04);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .card:hover {
+    .service-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 28px rgba(27,58,92,0.12);
+      box-shadow: 0 12px 32px rgba(27,58,92,0.1);
     }
-    .card-icon {
-      width: 56px;
-      height: 56px;
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(0,180,216,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon svg { width: 24px; height: 24px; fill: #00B4D8; }
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1B3A5C;
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: #6B7B8D;
+      line-height: 1.6;
+    }
+
+    /* ===== Why Choose Us ===== */
+    .why-section {
+      padding: 80px 20px;
+      background: #fff;
+    }
+    .why-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .why-content h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1B3A5C;
+      margin-bottom: 16px;
+    }
+    .why-content > p {
+      font-size: 15px;
+      color: #6B7B8D;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .why-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      color: #1A1A2E;
+    }
+    .why-check {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
       background: rgba(0,180,216,0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 16px;
+      margin-top: 1px;
     }
-    .card-icon svg { width: 26px; height: 26px; fill: #00B4D8; }
-    .card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #1B3A5C;
+    .why-check svg { width: 14px; height: 14px; fill: #00B4D8; }
+    .why-visual {
+      background: linear-gradient(135deg, #0D2B45 0%, #1B3A5C 100%);
+      border-radius: 16px;
+      padding: 48px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
     }
-    .card p {
-      font-size: 13px;
-      color: #6B7B8D;
-      line-height: 1.5;
+    .why-visual::before {
+      content: '';
+      position: absolute;
+      top: -40%; right: -20%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(0,180,216,0.15), transparent 70%);
+      pointer-events: none;
     }
-
-    /* ===== Info Bar ===== */
-    .info-bar {
-      background: #fff;
-      padding: 40px 20px;
+    .why-visual-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .why-stat {
       text-align: center;
     }
-    .info-bar .container {
-      max-width: 800px;
+    .why-stat-num {
+      font-size: 40px;
+      font-weight: 800;
+      color: #00B4D8;
+      line-height: 1;
+    }
+    .why-stat-label {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-top: 6px;
+    }
+
+    /* ===== Testimonials ===== */
+    .testimonials-section {
+      padding: 80px 20px;
+      background: #F5F7FA;
+    }
+    .testimonials-grid {
+      max-width: 1100px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
-    .info-bar h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-      color: #1B3A5C;
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid #E2E8F0;
     }
-    .info-bar p {
+    .testimonial-stars {
+      color: #F59E0B;
+      font-size: 16px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .testimonial-card blockquote {
       font-size: 14px;
-      color: #6B7B8D;
+      color: #1A1A2E;
+      line-height: 1.7;
+      font-style: italic;
       margin-bottom: 20px;
     }
-    .info-stats {
+    .testimonial-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1B3A5C;
+    }
+    .testimonial-source {
+      font-size: 11px;
+      color: #6B7B8D;
+    }
+
+    /* ===== CTA Section ===== */
+    .cta-section {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0D2B45, #1B3A5C);
+      text-align: center;
+      color: #fff;
+    }
+    .cta-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-buttons {
       display: flex;
       justify-content: center;
-      gap: 48px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
-    .stat { text-align: center; }
-    .stat-number {
-      font-size: 28px;
-      font-weight: 700;
-      color: #00B4D8;
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 6px;
+      transition: all 0.2s;
     }
-    .stat-label {
-      font-size: 12px;
-      color: #6B7B8D;
-      margin-top: 2px;
+    .cta-btn-primary {
+      background: #00B4D8;
+      color: #fff;
     }
+    .cta-btn-primary:hover { background: #0096B7; }
+    .cta-btn-phone {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+    }
+    .cta-btn-phone:hover { background: rgba(255,255,255,0.2); }
 
     /* ===== Footer ===== */
     .site-footer {
-      background: #0D2B45;
+      background: #0A1F33;
       color: rgba(255,255,255,0.75);
-      padding: 40px 20px 24px;
+      padding: 48px 20px 24px;
       font-size: 13px;
     }
     .footer-grid {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-bottom: 32px;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
     }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .footer-brand svg { width: 24px; height: 24px; fill: #00B4D8; }
+    .footer-brand span { font-size: 18px; font-weight: 700; color: #fff; }
     .footer-col h4 {
       color: #fff;
-      font-size: 14px;
-      margin-bottom: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
     }
     .footer-col p,
     .footer-col a {
       display: block;
-      margin-bottom: 6px;
-      color: rgba(255,255,255,0.65);
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.55);
       transition: color 0.2s;
+      font-size: 13px;
     }
     .footer-col a:hover { color: #00B4D8; }
     .footer-col .phone {
       color: #00B4D8;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 16px;
     }
     .footer-bottom {
       max-width: 1100px;
       margin: 0 auto;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 20px;
-      text-align: center;
-      color: rgba(255,255,255,0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255,255,255,0.35);
       font-size: 12px;
+    }
+    .footer-badges {
+      display: flex;
+      gap: 16px;
+      font-size: 11px;
+    }
+    .footer-badge {
+      background: rgba(255,255,255,0.06);
+      padding: 4px 10px;
+      border-radius: 4px;
+      color: rgba(255,255,255,0.5);
     }
 
     /* ===== Utilities ===== */
@@ -240,14 +549,18 @@
     @media (max-width: 768px) {
       .top-bar { display: none; }
       .nav-links { display: none; }
-      .hero { padding: 48px 20px 64px; }
-      .hero h1 { font-size: 26px; }
-      .cards-grid { grid-template-columns: repeat(2, 1fr); }
-      .info-stats { gap: 24px; flex-wrap: wrap; }
+      .hero { min-height: auto; }
+      .hero .container { flex-direction: column; text-align: center; padding-top: 40px; padding-bottom: 40px; }
+      .hero h1 { font-size: 30px; }
+      .hero-graphic { width: 200px; height: 200px; }
+      .hero-graphic svg { width: 100px; height: 100px; }
+      .hero-buttons { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .cards-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     }
   </style>
 </head>
@@ -256,9 +569,13 @@
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container">
-      <a href="#">Get a Quote</a>
-      <a href="#">Storage</a>
-      <a href="#">Contact Us</a>
+      <div class="top-bar-left">
+        <span>Family-Owned Since 1990 | San Antonio, TX</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:2109420357">(210) 942-0357</a>
+        <a href="mailto:marc@movelogistics.net">marc@movelogistics.net</a>
+      </div>
     </div>
   </div>
 
@@ -267,82 +584,200 @@
     <div class="container">
       <div class="logo">
         <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-        Move Logistics
+        <div>
+          Move Logistics
+          <span class="logo-text-sub">Moving &amp; Storage</span>
+        </div>
       </div>
       <ul class="nav-links">
         <li><a href="#">Local Moving</a></li>
         <li><a href="#">Long Distance</a></li>
         <li><a href="#">Storage</a></li>
         <li><a href="#">Packing</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#" class="nav-cta">Get a Quote</a></li>
       </ul>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Move Logistics &mdash; San Antonio's Trusted Movers Since 1990</h1>
-    <p>Family-owned moving company with 80% referral rate. Local, long distance, storage, and packing services.</p>
-    <a href="#" class="hero-btn">Get a Free Quote</a>
-  </section>
-
-  <!-- Service Cards -->
-  <section class="cards-section">
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Trusted San Antonio Movers</div>
+        <h1>Your Move, <span>Our Mission.</span></h1>
+        <p>Move Logistics is a family-owned moving company serving San Antonio and beyond since 1990. From local moves to long distance, we handle it all with care and professionalism.</p>
+        <div class="hero-buttons">
+          <a href="#" class="hero-btn hero-btn-primary">Get a Free Quote</a>
+          <a href="tel:2109420357" class="hero-btn hero-btn-outline">Call (210) 942-0357</a>
         </div>
-        <h3>Local Moving</h3>
-        <p>Professional movers with 5+ years experience for homes, apartments, and condos across San Antonio.</p>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-number">35+</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">80%</div>
+            <div class="hero-stat-label">Referral Rate</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">4.9</div>
+            <div class="hero-stat-label">Google Rating</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">A+</div>
+            <div class="hero-stat-label">BBB Rating</div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-        </div>
-        <h3>Long Distance</h3>
-        <p>Licensed interstate moving to all 48 states. USDOT &amp; MC certified for safe, reliable transport.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/></svg>
-        </div>
-        <h3>Storage</h3>
-        <p>Climate-controlled and standard storage units with 24/7 security monitoring. Short and long term.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.5 14H15v-4h-2.5L15 9h-1.5l-2.5 4h2.5l-2.5 4h4.5z"/></svg>
-        </div>
-        <h3>Packing Services</h3>
-        <p>Full and partial packing by experienced professionals. We bring all materials and handle everything.</p>
+      <div class="hero-graphic">
+        <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
       </div>
     </div>
   </section>
 
-  <!-- Info Stats Bar -->
-  <section class="info-bar">
-    <div class="container">
-      <h2>Trusted by San Antonio Families</h2>
-      <p>Family-owned and operated since 1990. Your move is in good hands.</p>
-      <div class="info-stats">
-        <div class="stat">
-          <div class="stat-number">35+</div>
-          <div class="stat-label">Years Experience</div>
+  <!-- Services -->
+  <section class="services-section">
+    <div class="section-header">
+      <h2>Our Moving Services</h2>
+      <p>Comprehensive moving solutions tailored to your needs, handled by career movers with 5+ years experience.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
         </div>
-        <div class="stat">
-          <div class="stat-number">80%</div>
-          <div class="stat-label">Referral Rate</div>
+        <h3>Local Moving</h3>
+        <p>Expert residential and apartment movers serving San Antonio, Boerne, New Braunfels, Austin, and the surrounding Hill Country.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
         </div>
-        <div class="stat">
-          <div class="stat-number">4.9</div>
-          <div class="stat-label">Google Stars</div>
+        <h3>Long Distance</h3>
+        <p>Licensed and insured interstate moving to all 48 continental states. USDOT and MC certified for your protection.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/></svg>
         </div>
-        <div class="stat">
-          <div class="stat-number">A+</div>
-          <div class="stat-label">BBB Rating</div>
+        <h3>Storage Solutions</h3>
+        <p>Climate-controlled and standard storage with 24/7 security monitoring. Flexible short-term and long-term options.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        </div>
+        <h3>Packing Services</h3>
+        <p>Full and partial packing by trained professionals. We supply all materials and handle your belongings with care.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+        </div>
+        <h3>Office &amp; Commercial</h3>
+        <p>Custom-planned business relocations with minimal downtime. In-house forklifts for heavy equipment moves.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <h3>White Glove</h3>
+        <p>Premium care for antiques, fine art, pianos, and heirlooms. Custom crating and detailed inventory management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-section">
+    <div class="why-grid">
+      <div class="why-content">
+        <h2>Why San Antonio Trusts Move Logistics</h2>
+        <p>For over 35 years, families and businesses across Texas have chosen us for our reliability, professionalism, and genuine care for every item we move.</p>
+        <ul class="why-list">
+          <li>
+            <div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <div><strong>Career movers</strong> with 5+ years of professional experience</div>
+          </li>
+          <li>
+            <div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <div><strong>Fully licensed &amp; insured</strong> — USDOT, MC, and TxDMV certified</div>
+          </li>
+          <li>
+            <div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <div><strong>80% referral rate</strong> — our customers trust us enough to recommend us</div>
+          </li>
+          <li>
+            <div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <div><strong>Two locations</strong> — San Antonio and Boerne for faster service</div>
+          </li>
+          <li>
+            <div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <div><strong>Free estimates</strong> — transparent pricing with no hidden fees</div>
+          </li>
+        </ul>
+      </div>
+      <div class="why-visual">
+        <div class="why-visual-stats">
+          <div class="why-stat">
+            <div class="why-stat-num">35+</div>
+            <div class="why-stat-label">Years in Business</div>
+          </div>
+          <div class="why-stat">
+            <div class="why-stat-num">4.9</div>
+            <div class="why-stat-label">Google Stars</div>
+          </div>
+          <div class="why-stat">
+            <div class="why-stat-num">A+</div>
+            <div class="why-stat-label">BBB Rating</div>
+          </div>
+          <div class="why-stat">
+            <div class="why-stat-num">48</div>
+            <div class="why-stat-label">States Served</div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <h2>What Our Customers Say</h2>
+      <p>Real reviews from real San Antonio families.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Move Logistics made our move from San Antonio to Austin completely stress-free. The crew was professional, careful, and finished ahead of schedule."</blockquote>
+        <div class="testimonial-author">Sarah M.</div>
+        <div class="testimonial-source">Google Review</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Best moving experience we've ever had. They wrapped every piece of furniture, protected our floors, and nothing was damaged. Highly recommend!"</blockquote>
+        <div class="testimonial-author">David &amp; Maria R.</div>
+        <div class="testimonial-source">Yelp Review</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We used Move Logistics for our office relocation and were impressed by their planning and execution. Zero downtime for our business."</blockquote>
+        <div class="testimonial-author">James T.</div>
+        <div class="testimonial-source">BBB Review</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to Move?</h2>
+    <p>Get your free, no-obligation moving estimate today. Our team is standing by to help plan your perfect move.</p>
+    <div class="cta-buttons">
+      <a href="#" class="cta-btn cta-btn-primary">Get a Free Quote</a>
+      <a href="tel:2109420357" class="cta-btn cta-btn-phone">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        (210) 942-0357
+      </a>
     </div>
   </section>
 
@@ -350,35 +785,56 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Contact Us</h4>
-        <p class="phone">(210) 348-6683</p>
+        <div class="footer-brand">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          <span>Move Logistics</span>
+        </div>
+        <p>Family-owned moving company proudly serving San Antonio and all of Texas since 1990.</p>
+        <p style="margin-top: 12px;" class="phone">(210) 942-0357</p>
         <p>Text: (210) 838-7682</p>
-        <p>Email: marc@movelogistics.net</p>
-        <p>Mon-Fri 7am-5pm, Sat 7am-2pm</p>
+        <p>marc@movelogistics.net</p>
       </div>
       <div class="footer-col">
-        <h4>San Antonio HQ</h4>
-        <p>10510 Interstate 35 Frontage Rd</p>
-        <p>San Antonio, TX 78233</p>
-        <p>Boerne: (830) 396-5798</p>
-        <p>209 TX-46, Boerne, TX 78006</p>
-      </div>
-      <div class="footer-col">
-        <h4>Our Services</h4>
+        <h4>Services</h4>
         <a href="#">Local Moving</a>
         <a href="#">Long Distance</a>
         <a href="#">Storage</a>
         <a href="#">Packing Services</a>
-        <a href="#">White Glove Moving</a>
+        <a href="#">Office Moving</a>
+        <a href="#">White Glove</a>
+      </div>
+      <div class="footer-col">
+        <h4>San Antonio</h4>
+        <p>10510 Interstate 35 Frontage Rd</p>
+        <p>San Antonio, TX 78233</p>
+        <p style="margin-top: 12px;"><strong style="color:#fff;">Boerne Office</strong></p>
+        <p>209 TX-46</p>
+        <p>Boerne, TX 78006</p>
+        <p>(830) 396-5798</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Mon - Fri: 7am - 5pm</p>
+        <p>Saturday: 7am - 2pm</p>
+        <p>Sunday: Closed</p>
+        <p style="margin-top: 16px;"><strong style="color:#fff;">Ratings</strong></p>
+        <p>Google: 4.9/5</p>
+        <p>BBB: A+ Rating</p>
+        <p>Yelp: 5/5</p>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2025 Move Logistics. All rights reserved. 10510 Interstate 35 Frontage Rd, San Antonio, TX 78233
+      <span>&copy; 2025 Move Logistics. All rights reserved.</span>
+      <div class="footer-badges">
+        <span class="footer-badge">USDOT #2295112</span>
+        <span class="footer-badge">MC #919701</span>
+        <span class="footer-badge">TxDMV Licensed</span>
+      </div>
     </div>
   </footer>
 
   <!-- Chat Widget -->
-  <script src="widget.js?v=5"></script>
+  <script src="widget.js?v=6"></script>
 
 </body>
 </html>
