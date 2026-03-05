@@ -21,20 +21,20 @@
 
   var TEXT = {
     EN: {
-      title: 'CPS Energy Assistant',
+      title: 'Move Logistics Assistant',
       subtitle: 'Online now',
-      welcome: "Hi! I'm your CPS Energy Assistant. How can I help?",
+      welcome: "Hi! I'm your Move Logistics Assistant. How can I help with your move?",
       placeholder: 'Type your message...',
-      error: "I'm sorry, I'm having trouble connecting. Please call CPS Energy at 210-353-2222 for help.",
+      error: "I'm sorry, I'm having trouble connecting. Please call Move Logistics at (210) 942-0357 for help.",
       langButton: 'ES',
       mainMenu: 'Main Menu'
     },
     ES: {
-      title: 'Asistente CPS Energy',
+      title: 'Asistente Move Logistics',
       subtitle: 'En linea',
-      welcome: 'Hola! Soy su Asistente de CPS Energy. Como puedo ayudarle?',
+      welcome: 'Hola! Soy su Asistente de Move Logistics. Como puedo ayudarle con su mudanza?',
       placeholder: 'Escriba su mensaje...',
-      error: 'Lo siento, tengo problemas para conectarme. Llame a CPS Energy al 210-353-2222.',
+      error: 'Lo siento, tengo problemas para conectarme. Llame a Move Logistics al (210) 942-0357.',
       langButton: 'EN',
       mainMenu: 'Menu Principal'
     }
@@ -46,55 +46,52 @@
 
   var MENU = [
     {
-      id: 'billing', emoji: '\uD83D\uDCA1', label: 'Pay My Bill', es: 'Pagar Factura',
+      id: 'quote', emoji: '\uD83D\uDCCB', label: 'Get a Quote', es: 'Cotizacion',
+      directMsg: 'I would like to get a free moving quote.', directMsgEs: 'Me gustaria obtener una cotizacion gratuita para mi mudanza.',
       subs: [
-        { label: 'Free Options', es: 'Opciones Gratis', msg: 'What are the free ways to pay my CPS Energy bill?', msgEs: 'Cuales son las formas gratuitas de pagar mi factura de CPS Energy?' },
-        { label: 'Pay Online', es: 'Pagar en Linea', msg: 'How do I pay my CPS Energy bill online?', msgEs: 'Como pago mi factura de CPS Energy en linea?' },
-        { label: 'Pay by Phone', es: 'Pagar por Telefono', msg: 'How do I pay my CPS Energy bill by phone?', msgEs: 'Como pago mi factura de CPS Energy por telefono?' },
-        { label: 'Payment Locations', es: 'Lugares de Pago', msg: 'Where can I pay my CPS Energy bill in person?', msgEs: 'Donde puedo pagar mi factura de CPS Energy en persona?' }
+        { label: 'Local Move', es: 'Mudanza Local', msg: 'I need a quote for a local move in the San Antonio area.', msgEs: 'Necesito una cotizacion para una mudanza local en el area de San Antonio.' },
+        { label: 'Long Distance', es: 'Larga Distancia', msg: 'I need a quote for a long distance or out-of-state move.', msgEs: 'Necesito una cotizacion para una mudanza de larga distancia o fuera del estado.' },
+        { label: 'Office Move', es: 'Oficina', msg: 'I need a quote for an office or commercial move.', msgEs: 'Necesito una cotizacion para una mudanza de oficina o comercial.' }
       ]
     },
     {
-      id: 'outages', emoji: '\u26A1', label: 'Report Outage', es: 'Reportar Apagon',
-      directMsg: 'I need to report a power outage.', directMsgEs: 'Necesito reportar un apagon.',
+      id: 'local', emoji: '\uD83C\uDFE0', label: 'Local Moving', es: 'Mudanza Local',
       subs: [
-        { label: 'Outage Map', es: 'Mapa de Apagones', msg: 'Where can I check the CPS Energy outage map?', msgEs: 'Donde puedo ver el mapa de apagones de CPS Energy?' },
-        { label: 'Check Status', es: 'Ver Estado', msg: 'How can I check the status of a reported outage?', msgEs: 'Como puedo verificar el estado de un apagon reportado?' }
+        { label: 'What\'s Included', es: 'Que Incluye', msg: 'What is included in your local moving service?', msgEs: 'Que incluye su servicio de mudanza local?' },
+        { label: 'Service Area', es: 'Area de Servicio', msg: 'What areas do you serve for local moves?', msgEs: 'Que areas cubren para mudanzas locales?' },
+        { label: 'Why Choose Us', es: 'Por Que Elegirnos', msg: 'Why should I choose Move Logistics for my local move?', msgEs: 'Por que deberia elegir Move Logistics para mi mudanza local?' }
       ]
     },
     {
-      id: 'assistance', emoji: '\uD83D\uDCB0', label: 'Get Assistance', es: 'Obtener Ayuda',
+      id: 'longdistance', emoji: '\uD83D\uDE9A', label: 'Long Distance', es: 'Larga Distancia',
       subs: [
-        { label: 'REAP Bill Help', es: 'Ayuda REAP', msg: 'Tell me about the REAP energy assistance program.', msgEs: 'Cuentame sobre el programa de asistencia REAP.' },
-        { label: 'Affordability Discount', es: 'Descuento', msg: 'What affordability discount programs does CPS Energy offer?', msgEs: 'Que programas de descuento ofrece CPS Energy?' },
-        { label: 'Budget Plan', es: 'Plan de Pago', msg: 'Tell me about the CPS Energy budget billing plan.', msgEs: 'Cuentame sobre el plan de facturacion de CPS Energy.' },
-        { label: 'Assistance Finder', es: 'Buscador', msg: 'How does the CPS Energy Assistance Finder tool work?', msgEs: 'Como funciona el Buscador de Asistencia de CPS Energy?' }
+        { label: 'How It Works', es: 'Como Funciona', msg: 'How does your long distance moving service work?', msgEs: 'Como funciona su servicio de mudanza de larga distancia?' },
+        { label: 'Destinations', es: 'Destinos', msg: 'What states and cities do you move to for long distance?', msgEs: 'A que estados y ciudades se mudan para larga distancia?' },
+        { label: 'Licensing', es: 'Licencias', msg: 'Are you licensed for interstate moves?', msgEs: 'Estan licenciados para mudanzas interestatales?' }
       ]
     },
     {
-      id: 'service', emoji: '\uD83C\uDFE0', label: 'Start/Stop Service', es: 'Iniciar/Detener',
+      id: 'storage', emoji: '\uD83D\uDCE6', label: 'Storage', es: 'Almacenamiento',
       subs: [
-        { label: 'Start Service', es: 'Iniciar', msg: 'How do I start CPS Energy service?', msgEs: 'Como inicio el servicio de CPS Energy?' },
-        { label: 'Stop Service', es: 'Detener', msg: 'How do I stop my CPS Energy service?', msgEs: 'Como detengo mi servicio de CPS Energy?' },
-        { label: 'Transfer', es: 'Transferir', msg: 'How do I transfer my CPS Energy service to a new address?', msgEs: 'Como transfiero mi servicio a una nueva direccion?' },
-        { label: 'Reconnect', es: 'Reconectar', msg: 'How do I reconnect my CPS Energy service after disconnection?', msgEs: 'Como reconecto mi servicio despues de una desconexion?' }
+        { label: 'Climate Controlled', es: 'Climatizado', msg: 'Tell me about your climate-controlled storage options.', msgEs: 'Cuentame sobre sus opciones de almacenamiento climatizado.' },
+        { label: 'Short & Long Term', es: 'Corto y Largo Plazo', msg: 'Do you offer both short-term and long-term storage?', msgEs: 'Ofrecen almacenamiento a corto y largo plazo?' },
+        { label: 'Security', es: 'Seguridad', msg: 'How secure is your storage facility?', msgEs: 'Que tan seguro es su almacen?' }
       ]
     },
     {
-      id: 'savings', emoji: '\uD83C\uDF31', label: 'Rebates & Savings', es: 'Reembolsos',
+      id: 'packing', emoji: '\uD83D\uDCE5', label: 'Packing Services', es: 'Empaque',
       subs: [
-        { label: 'STEP Rebates', es: 'Reembolsos STEP', msg: 'What rebates does CPS Energy offer through the STEP program?', msgEs: 'Que reembolsos ofrece CPS Energy con el programa STEP?' },
-        { label: 'Smart Thermostat', es: 'Termostato', msg: 'Tell me about the CPS Energy smart thermostat program.', msgEs: 'Cuentame sobre el programa de termostato inteligente.' },
-        { label: 'Solar Options', es: 'Solar', msg: 'What solar energy options does CPS Energy offer?', msgEs: 'Que opciones solares ofrece CPS Energy?' },
-        { label: 'Energy Tips', es: 'Consejos', msg: 'What are some tips for saving energy at home?', msgEs: 'Cuales son consejos para ahorrar energia en casa?' }
+        { label: 'Full Packing', es: 'Empaque Completo', msg: 'Tell me about your full packing service.', msgEs: 'Cuentame sobre su servicio de empaque completo.' },
+        { label: 'Partial Packing', es: 'Empaque Parcial', msg: 'Do you offer partial packing where you only pack some items?', msgEs: 'Ofrecen empaque parcial donde solo empacan algunos articulos?' },
+        { label: 'Packing Supplies', es: 'Materiales', msg: 'Do you sell packing supplies and moving boxes?', msgEs: 'Venden materiales de empaque y cajas para mudanza?' }
       ]
     },
     {
       id: 'contact', emoji: '\uD83D\uDCDE', label: 'Contact Us', es: 'Contactenos',
       subs: [
-        { label: 'Phone Numbers', es: 'Telefonos', msg: 'What are CPS Energy phone numbers?', msgEs: 'Cuales son los numeros de telefono de CPS Energy?' },
-        { label: 'Walk-In Centers', es: 'Centros', msg: 'Where are CPS Energy walk-in customer service centers?', msgEs: 'Donde estan los centros de servicio de CPS Energy?' },
-        { label: 'My Account Online', es: 'Mi Cuenta', msg: 'How do I access my CPS Energy account online?', msgEs: 'Como accedo a mi cuenta de CPS Energy en linea?' }
+        { label: 'Phone & Text', es: 'Telefono y Texto', msg: 'What is the Move Logistics phone number?', msgEs: 'Cual es el numero de telefono de Move Logistics?' },
+        { label: 'Locations', es: 'Ubicaciones', msg: 'Where are your office locations?', msgEs: 'Donde estan sus oficinas?' },
+        { label: 'Hours', es: 'Horarios', msg: 'What are your business hours?', msgEs: 'Cual es su horario de atencion?' }
       ]
     }
   ];
@@ -142,7 +139,7 @@
     bubble.className = 'cps-chat-bubble';
     bubble.setAttribute('role', 'button');
     bubble.setAttribute('tabindex', '0');
-    bubble.setAttribute('aria-label', 'Open CPS Energy chat assistant');
+    bubble.setAttribute('aria-label', 'Open Move Logistics chat assistant');
     bubble.innerHTML = ICON_CHAT;
     bubble.addEventListener('click', toggleChat);
     bubble.addEventListener('keydown', function (e) {
@@ -155,7 +152,7 @@
     chatWindow = document.createElement('div');
     chatWindow.className = 'cps-chat-window';
     chatWindow.setAttribute('role', 'dialog');
-    chatWindow.setAttribute('aria-label', 'CPS Energy Chat Assistant');
+    chatWindow.setAttribute('aria-label', 'Move Logistics Chat Assistant');
 
     /* Header */
     var header = document.createElement('div');

@@ -1,836 +1,283 @@
 {
-  "billing_and_payments": {
-    "overview": "CPS Energy offers multiple convenient ways to pay your bill. Most methods are available 24/7.",
-    "payment_methods": [
-      {
-        "method": "Online via My Account",
-        "description": "Pay through your CPS Energy My Account portal at cpsenergy.com. You can make one-time payments or set up AutoPay.",
-        "fee": "No fee",
-        "availability": "24/7",
-        "accepted_payments": ["Bank account (ACH)", "Credit card", "Debit card"],
-        "url": "https://www.cpsenergy.com/myaccount"
-      },
-      {
-        "method": "AutoPay",
-        "description": "Enroll in automatic monthly payments through My Account. Your bill is paid automatically each month from your bank account or card on file.",
-        "fee": "No fee",
-        "availability": "Automatic monthly withdrawal",
-        "enrollment": "Sign up through My Account portal or call customer service",
-        "accepted_payments": ["Bank account (ACH)", "Credit card", "Debit card"]
-      },
-      {
-        "method": "Pay by Phone (Automated)",
-        "description": "Call the automated payment line to pay by phone using your account number.",
-        "phone": "210-353-2222",
-        "fee": "No fee",
-        "availability": "24/7",
-        "accepted_payments": ["Bank account (ACH)", "Credit card", "Debit card"]
-      },
-      {
-        "method": "Pay by Phone (Agent-Assisted)",
-        "description": "Speak with a customer service representative to make a payment over the phone.",
-        "phone": "210-353-2222",
-        "fee": "$3.00 convenience fee",
-        "availability": "Monday-Friday 8:00 AM - 7:00 PM, Saturday 8:00 AM - 5:00 PM",
-        "accepted_payments": ["Bank account (ACH)", "Credit card", "Debit card"]
-      },
-      {
-        "method": "Pay by Mail",
-        "description": "Send your payment by mail using the return envelope included with your bill statement.",
-        "mailing_address": "CPS Energy, P.O. Box 101, San Antonio, TX 78291-0101",
-        "fee": "No fee (cost of postage)",
-        "accepted_payments": ["Check", "Money order"],
-        "note": "Allow 5-7 business days for mail delivery. Do not send cash."
-      },
-      {
-        "method": "Pay In Person - CPS Energy Walk-In Centers",
-        "description": "Visit a CPS Energy customer service center to pay in person.",
-        "fee": "No fee",
-        "locations": [
-          {
-            "name": "CPS Energy Main Plaza",
-            "address": "145 Navarro St, San Antonio, TX 78205",
-            "hours": "Monday-Friday 7:30 AM - 5:30 PM"
-          },
-          {
-            "name": "CPS Energy West",
-            "address": "2515 Babcock Rd, San Antonio, TX 78229",
-            "hours": "Monday-Friday 8:00 AM - 5:00 PM"
-          },
-          {
-            "name": "CPS Energy Southeast",
-            "address": "3495 E. Houston St, San Antonio, TX 78219",
-            "hours": "Monday-Friday 8:00 AM - 5:00 PM"
-          }
-        ],
-        "accepted_payments": ["Cash", "Check", "Money order", "Credit card", "Debit card"]
-      },
-      {
-        "method": "Authorized Pay Stations",
-        "description": "Pay at authorized third-party pay station locations throughout San Antonio including select grocery stores, convenience stores, and check cashing locations.",
-        "fee": "Fees vary by location (typically $1.00-$2.00)",
-        "availability": "Varies by location",
-        "accepted_payments": ["Cash", "Check", "Money order"],
-        "note": "Find locations at cpsenergy.com or call 210-353-2222. Payments may take 1-2 business days to post."
-      },
-      {
-        "method": "Drop Box",
-        "description": "Use the secure payment drop boxes located at CPS Energy service centers. Available for after-hours payments.",
-        "fee": "No fee",
-        "availability": "24/7",
-        "accepted_payments": ["Check", "Money order"],
-        "note": "Do not deposit cash. Include your account number on your check or money order."
-      },
-      {
-        "method": "Bank Bill Pay",
-        "description": "Set up CPS Energy as a payee through your bank's online bill pay service.",
-        "fee": "No fee from CPS Energy (check with your bank)",
-        "availability": "Depends on your bank",
-        "accepted_payments": ["Bank account"],
-        "note": "Allow 3-5 business days for electronic payments or 5-7 business days for mailed checks from your bank."
-      }
-    ],
-    "billing_options": {
-      "average_billing": {
-        "name": "Average Billing (Level Pay)",
-        "description": "Smooths out seasonal bill fluctuations by averaging your monthly payments over a rolling 12-month period. Your monthly amount is recalculated periodically based on actual usage.",
-        "eligibility": "Account must be in good standing with 12 months of billing history at the service address.",
-        "enrollment": "Enroll through My Account online or call 210-353-2222."
-      },
-      "paperless_billing": {
-        "name": "Paperless Billing",
-        "description": "Receive your bill electronically via email instead of a paper bill. View and download your bill through My Account.",
-        "enrollment": "Enroll through My Account online."
-      },
-      "budget_billing": {
-        "name": "Budget Billing",
-        "description": "Similar to average billing, helps you plan monthly expenses by stabilizing your bill amount.",
-        "enrollment": "Contact customer service at 210-353-2222."
-      }
-    },
-    "understanding_your_bill": {
-      "bill_components": [
-        "Base/customer charge - fixed monthly service fee",
-        "Energy charge - based on kWh of electricity and/or CCF of natural gas used",
-        "Fuel adjustment charge - reflects changes in fuel costs",
-        "Regulatory charge - costs associated with regulatory compliance",
-        "City of San Antonio franchise fee",
-        "Taxes"
-      ],
-      "meter_reading": "Meters are read monthly. If a meter cannot be read, the bill may be estimated based on historical usage.",
-      "billing_cycle": "Bills are generated monthly. Due date is typically 16 days after the bill date.",
-      "late_payment": "A late payment penalty of 5% may be applied if payment is not received by the due date."
-    }
-  },
-
-  "assistance_programs": {
-    "overview": "CPS Energy and its community partners offer multiple assistance programs to help customers who are struggling to pay their energy bills.",
-    "programs": [
-      {
-        "name": "Residential Energy Assistance Partnership (REAP)",
-        "description": "CPS Energy's primary bill assistance program funded by voluntary customer contributions and a one-time $6 million CPS Energy contribution. Provides direct assistance with energy bills for qualifying low-income customers in the CPS Energy service area.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Household income at or below 150% of the Federal Poverty Level",
-          "Must be a Bexar County resident for maximum benefit",
-          "Must provide proof of income for all household members",
-          "Must provide valid government-issued photo ID",
-          "Assistance available up to twice per calendar year"
-        ],
-        "how_to_apply": "Apply online through the City of San Antonio, call Bexar County at 210-335-3666, call CPS Energy Customer Engagement at 210-353-4483, or dial United Way at 211. You can also use the CPS Energy Assistance Finder tool online to apply for REAP and other programs in a single application.",
-        "assistance_amount": "Up to $1,200 for Bexar County residents depending on funding availability and need",
-        "phone": "210-353-4483",
-        "additional_phones": {
-          "bexar_county": "210-335-3666",
-          "united_way": "211"
-        }
-      },
-      {
-        "name": "LIHEAP (Low Income Home Energy Assistance Program)",
-        "description": "Federally funded program administered through the Texas Department of Housing and Community Affairs. Helps low-income households with energy costs.",
-        "eligibility": [
-          "Household income at or below 150% of the Federal Poverty Level",
-          "Must be responsible for home energy costs",
-          "Priority given to elderly, disabled, and families with young children",
-          "Must provide Social Security numbers for all household members"
-        ],
-        "how_to_apply": "Apply through local Community Action Agency or call 2-1-1 for referral to nearest intake center.",
-        "assistance_amount": "Varies based on funding and household need",
-        "phone": "211"
-      },
-      {
-        "name": "CEAP (Comprehensive Energy Assistance Program)",
-        "description": "State-funded program that provides utility payment assistance and energy education to low-income Texas households.",
-        "eligibility": [
-          "Household income at or below 150% of the Federal Poverty Level",
-          "Must be a Texas resident",
-          "Must provide proof of income, residency, and identification"
-        ],
-        "how_to_apply": "Contact local CEAP sub-recipient agency. In San Antonio, contact the City of San Antonio Department of Human Services.",
-        "phone": "210-207-8198"
-      },
-      {
-        "name": "Affordability Discount Program (ADP)",
-        "description": "CPS Energy discount program that provides a monthly discount on both electricity and natural gas service to qualifying low-income customers.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Household income at or below 150% of the Federal Poverty Level",
-          "Must also meet at least one of the following: age 60 or older, have a disability, require life-sustaining medical equipment, have preschool or school-age children in the household, meet veterans discount qualifications, or demonstrate extenuating circumstances",
-          "Must apply and be approved annually"
-        ],
-        "how_to_apply": "Apply through CPS Energy, a partner agency, or use the Assistance Finder tool at cpsenergy.com. Call 210-353-2222 for details.",
-        "benefit": "Monthly discount applied directly to your CPS Energy bill for both electric and gas service"
-      },
-      {
-        "name": "Project WARM (Weatherization and Appliance Replacement Modification)",
-        "description": "Free home weatherization program that helps reduce energy costs by improving home energy efficiency. Includes insulation, weather-stripping, caulking, and HVAC repairs or replacements.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Household income at or below 200% of the Federal Poverty Level",
-          "Must own or have landlord permission for weatherization work",
-          "Home must be in the CPS Energy service area"
-        ],
-        "how_to_apply": "Call CPS Energy at 210-353-4670 or apply online at cpsenergy.com.",
-        "benefit": "Free home weatherization improvements valued at several thousand dollars",
-        "phone": "210-353-4670"
-      },
-      {
-        "name": "Medical Protection Program",
-        "description": "Provides protection from disconnection for customers or household members who have a serious medical condition that requires electric-powered life support equipment.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Requires a physician's certification that a household member requires electric-powered life support equipment",
-          "Must be renewed every 90 days"
-        ],
-        "how_to_apply": "Complete the Medical Protection form and submit a physician's certification. Call 210-353-2222 for the form.",
-        "benefit": "Protection from disconnection for medical necessity (does not eliminate the obligation to pay)"
-      },
-      {
-        "name": "Payment Arrangements / Deferred Payment Plans",
-        "description": "CPS Energy offers flexible payment arrangements for customers who are behind on their bills. Allows you to spread past-due amounts over multiple installments.",
-        "eligibility": [
-          "Must be a CPS Energy customer with a past-due balance",
-          "Account must not have a broken payment arrangement in the last 12 months"
-        ],
-        "how_to_apply": "Call 210-353-2222 or visit a CPS Energy walk-in center to set up a payment plan.",
-        "benefit": "Spread past-due balance over 3-6 monthly installments while keeping service connected"
-      },
-      {
-        "name": "Military and Veteran Assistance",
-        "description": "Special protections and assistance for active military members and veterans, including protection from disconnection during active deployment.",
-        "eligibility": [
-          "Active duty military personnel",
-          "Veterans in need of bill assistance",
-          "Must provide proof of military status"
-        ],
-        "how_to_apply": "Call CPS Energy at 210-353-2222 and identify yourself as military/veteran. You may also be referred to partner organizations like the Salvation Army and Catholic Charities.",
-        "benefit": "Disconnection protection during deployment, referral to military-specific assistance programs"
-      },
-      {
-        "name": "Salvation Army Assistance",
-        "description": "The Salvation Army in San Antonio provides emergency utility assistance to qualifying families in crisis.",
-        "eligibility": [
-          "Must demonstrate financial hardship",
-          "Must provide proof of income and CPS Energy bill",
-          "Assistance available based on funding"
-        ],
-        "how_to_apply": "Contact the Salvation Army San Antonio at 210-352-2000 or visit a local office.",
-        "phone": "210-352-2000"
-      },
-      {
-        "name": "Catholic Charities Utility Assistance",
-        "description": "Catholic Charities of San Antonio provides emergency utility bill assistance to families in need.",
-        "eligibility": [
-          "Must demonstrate financial hardship",
-          "Must provide required documentation",
-          "Bexar County residents"
-        ],
-        "how_to_apply": "Call Catholic Charities at 210-222-1294 to schedule an appointment.",
-        "phone": "210-222-1294"
-      },
-      {
-        "name": "City of San Antonio Utility Assistance",
-        "description": "The City of San Antonio Department of Human Services provides utility assistance programs for qualifying residents.",
-        "eligibility": [
-          "Must be a San Antonio / Bexar County resident",
-          "Household income at or below 150% of the Federal Poverty Level",
-          "Must provide required documentation"
-        ],
-        "how_to_apply": "Contact the City of San Antonio Department of Human Services at 210-207-8198 or call 3-1-1.",
-        "phone": "210-207-8198"
-      },
-      {
-        "name": "211 Texas / United Way Referral Service",
-        "description": "Dial 2-1-1 for a free referral service that connects you to local assistance programs for utilities, food, housing, and other needs.",
-        "eligibility": [
-          "Available to all Texas residents"
-        ],
-        "how_to_apply": "Dial 2-1-1 from any phone, or visit 211texas.org.",
-        "phone": "211"
-      },
-      {
-        "name": "Casa Verde Weatherization Program",
-        "description": "FREE home weatherization program for qualifying CPS Energy customers. Includes insulation, weather stripping, and energy-efficient lighting upgrades to reduce energy consumption and lower bills. Administered by Franklin Energy Services on behalf of CPS Energy.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Available to qualifying homeowners and renters",
-          "Income-qualified (check current thresholds with CPS Energy)",
-          "Home must be in the CPS Energy service area"
-        ],
-        "how_to_apply": "Apply online using the CPS Energy Assistance Finder tool at cpsenergy.com, or call CPS Energy at 210-353-2222.",
-        "benefit": "Free home weatherization improvements including insulation, weather stripping, and energy-efficient lighting at no cost to the customer"
-      },
-      {
-        "name": "WRAP (Weatherization Repair Assistance Program)",
-        "description": "Bridges the gap for CPS Energy customers who do not qualify for the Casa Verde Weatherization Program but still need help with home weatherization and energy efficiency improvements.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Customers who do not qualify for Casa Verde but still need weatherization assistance",
-          "Income thresholds differ from Casa Verde — check with CPS Energy for current requirements"
-        ],
-        "how_to_apply": "Call CPS Energy at 210-353-2222 or apply through the Assistance Finder tool at cpsenergy.com.",
-        "benefit": "Home weatherization and repair assistance for customers who fall outside Casa Verde eligibility"
-      },
-      {
-        "name": "Senior Late Fee Waiver",
-        "description": "Qualifying senior customers can receive a waiver of late payment fees on their CPS Energy bill.",
-        "eligibility": [
-          "Must be a CPS Energy residential customer",
-          "Must be age 60 or older",
-          "Must meet income eligibility requirements"
-        ],
-        "how_to_apply": "Apply through the CPS Energy Assistance Finder tool at cpsenergy.com or call 210-353-2222.",
-        "benefit": "Waiver of late payment penalties on your CPS Energy bill"
-      }
-    ],
-    "assistance_finder_tool": {
-      "name": "CPS Energy Assistance Finder Tool",
-      "description": "Launched in July 2024, the Assistance Finder is a single online application that screens customers for eligibility across multiple assistance programs at once. Nearly 29,000 customers have used the tool since launch.",
-      "programs_covered": [
-        "Affordability Discount Program (ADP)",
-        "Residential Energy Assistance Partnership (REAP)",
-        "Casa Verde Weatherization Program",
-        "Senior Late Fee Waiver",
-        "Budget Payment Plan"
-      ],
-      "how_to_use": "Visit cpsenergy.com and navigate to the Assistance Finder tool. Complete one application and the system will determine which programs you may qualify for.",
-      "url": "https://www.cpsenergy.com"
-    }
-  },
-
-  "outage_reporting": {
-    "overview": "CPS Energy works to restore power as quickly and safely as possible during outages. You can report outages and check restoration status through multiple channels.",
-    "report_methods": [
+  "get_a_quote": {
+    "overview": "Move Logistics offers free, no-obligation estimates for all moving services. Contact us by phone, text, or through our website to get a personalized quote.",
+    "quote_methods": [
       {
         "method": "Phone",
-        "number": "210-353-4357",
-        "description": "Call to report an outage, downed power line, or check outage status. Available 24/7.",
-        "note": "This is the emergency and outage line."
+        "description": "Call us to speak with a moving consultant who will walk you through the process and provide a free estimate.",
+        "phone": "(210) 942-0357",
+        "availability": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
       },
       {
-        "method": "Online Outage Map",
-        "url": "https://outagemap.cpsenergy.com",
-        "description": "View real-time outage information on the interactive outage map. See affected areas, estimated restoration times, and number of customers impacted."
+        "method": "Text/SMS",
+        "description": "Text us with your move details for a quick response and estimate.",
+        "phone": "(210) 838-7682",
+        "availability": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
       },
       {
-        "method": "My Account Portal",
-        "url": "https://www.cpsenergy.com/myaccount",
-        "description": "Report an outage and check status through your CPS Energy My Account portal online."
+        "method": "Online Form",
+        "description": "Fill out our online quote request form on our website and a moving consultant will contact you promptly.",
+        "url": "https://movelogistics.net",
+        "availability": "24/7 (responses during business hours)"
       },
       {
-        "method": "CPS Energy Mobile App",
-        "description": "Report outages and track restoration status through the CPS Energy mobile app, available on iOS and Android."
-      },
-      {
-        "method": "Text Message",
-        "description": "Text OUT to 27000 to report an outage. You must first register your mobile number with your CPS Energy account.",
-        "text_to": "27000",
-        "keyword": "OUT"
-      },
-      {
-        "method": "Social Media",
-        "description": "Follow @CPSEnergy on Twitter/X and Facebook for outage updates and restoration information during major events.",
-        "platforms": ["Twitter/X: @CPSEnergy", "Facebook: facebook.com/cpsenergy"]
+        "method": "Email",
+        "description": "Send us an email with your move details and we'll get back to you with a quote.",
+        "email": "marc@movelogistics.net",
+        "availability": "24/7 (responses during business hours)"
       }
     ],
-    "outage_safety_tips": [
-      "Stay away from downed power lines - always assume they are energized",
-      "Report downed lines immediately by calling 210-353-4357",
-      "Turn off major appliances to prevent a power surge when electricity is restored",
-      "Keep refrigerator and freezer doors closed to preserve food (refrigerator keeps food cold ~4 hours, freezer ~48 hours if full)",
-      "Use flashlights instead of candles to prevent fire hazards",
-      "Never use generators, grills, or camp stoves indoors due to carbon monoxide risk",
-      "Check on elderly and vulnerable neighbors during extended outages",
-      "If you rely on electric-powered medical equipment, have a backup plan"
+    "what_to_have_ready": [
+      "Current address and destination address",
+      "Preferred move date (and flexibility if any)",
+      "Approximate size of home or office (number of bedrooms or square footage)",
+      "Any specialty items (piano, antiques, heavy equipment, etc.)",
+      "Whether you need packing services",
+      "Whether you need storage",
+      "Any access concerns (stairs, elevators, long carry distances, narrow streets)"
     ],
-    "restoration_process": {
-      "description": "CPS Energy follows a systematic restoration process to restore power to the greatest number of customers as safely and quickly as possible.",
+    "quote_process": {
+      "description": "Our moving consultant will discuss your specific needs, the scope of your move, and any special requirements to provide an accurate, transparent estimate.",
       "steps": [
-        "Assess damage and identify cause of outage",
-        "Repair transmission lines and substations first (restores power to largest groups)",
-        "Repair main distribution feeder lines",
-        "Repair individual tap lines serving neighborhoods",
-        "Repair individual service lines to homes and businesses"
-      ],
-      "note": "Restoration times vary based on the cause and extent of damage. During major storms, restoration may take longer."
+        "Contact us by phone, text, email, or online form",
+        "Discuss your move details with a consultant",
+        "Receive a free, no-obligation estimate",
+        "Schedule your move at a time that works for you"
+      ]
     }
   },
-
-  "start_stop_transfer": {
-    "start_service": {
-      "description": "Start new electric and/or gas service with CPS Energy.",
-      "methods": [
-        {
-          "method": "Online",
-          "url": "https://www.cpsenergy.com/myaccount",
-          "description": "Start service online through the CPS Energy website. This is the fastest method."
-        },
-        {
-          "method": "Phone",
-          "number": "210-353-2222",
-          "description": "Call customer service to start service.",
-          "hours": "Monday-Friday 7:00 AM - 7:00 PM"
-        },
-        {
-          "method": "In Person",
-          "description": "Visit a CPS Energy walk-in center with required documents."
-        }
-      ],
-      "requirements": [
-        "Valid government-issued photo ID (driver's license, passport, state ID, or military ID)",
-        "Social Security Number or ITIN",
-        "Service address and move-in date",
-        "Mailing address (if different from service address)",
-        "May require a deposit based on credit check or previous CPS Energy history"
-      ],
-      "deposit_info": {
-        "description": "A security deposit may be required based on creditworthiness or payment history.",
-        "waiver_options": [
-          "Good credit history (credit check)",
-          "Letter of credit from a previous utility company",
-          "Previous CPS Energy account in good standing"
-        ],
-        "refund": "Deposits are refunded after 12 months of on-time payments or when the account is closed."
-      },
-      "timeline": "Request service at least 2-3 business days before your desired start date. Same-day connections may be available but are not guaranteed."
-    },
-    "stop_service": {
-      "description": "Disconnect your CPS Energy service when moving out.",
-      "methods": [
-        {
-          "method": "Online",
-          "url": "https://www.cpsenergy.com/myaccount",
-          "description": "Request disconnection through My Account."
-        },
-        {
-          "method": "Phone",
-          "number": "210-353-2222",
-          "description": "Call customer service to stop service."
-        }
-      ],
-      "requirements": [
-        "Provide your account number or service address",
-        "Provide the date you want service disconnected",
-        "Provide a forwarding/mailing address for your final bill",
-        "Request stop at least 2 business days in advance"
-      ],
-      "final_bill": "A final bill will be mailed to your forwarding address. Any remaining balance must be paid, and any deposit (plus interest) will be applied to the final bill. If a credit remains, a refund check will be issued.",
-      "note": "You are responsible for all energy usage at the service address until the disconnection date."
-    },
-    "transfer_service": {
-      "description": "Transfer your CPS Energy service from one address to another within the CPS Energy service area.",
-      "methods": [
-        {
-          "method": "Online",
-          "url": "https://www.cpsenergy.com/myaccount",
-          "description": "Transfer service through My Account."
-        },
-        {
-          "method": "Phone",
-          "number": "210-353-2222",
-          "description": "Call customer service to transfer service."
-        }
-      ],
-      "requirements": [
-        "Current account information",
-        "New service address and move-in date",
-        "Date to disconnect at current address",
-        "Account must be in good standing"
-      ],
-      "timeline": "Request transfer at least 3 business days before your move date.",
-      "note": "Your account number will remain the same. A final bill for the old address and a new bill for the new address will be generated."
-    },
-    "reconnect_service": {
-      "description": "Reconnect electric service that was disconnected for non-payment.",
-      "methods": [
-        {
-          "method": "Online Self-Service",
-          "url": "https://www.cpsenergy.com/myaccount",
-          "description": "Use the online self-service reconnection form through My Account to request reconnection after paying the required amount."
-        },
-        {
-          "method": "Phone",
-          "number": "210-353-2222",
-          "description": "Call customer service to arrange reconnection and payment."
-        },
-        {
-          "method": "In Person",
-          "description": "Visit a CPS Energy walk-in center to pay and request reconnection."
-        }
-      ],
-      "requirements": [
-        "Pay the past-due amount or arrange a payment plan",
-        "May require a reconnection fee",
-        "Outstanding balance must be resolved before reconnection"
-      ],
-      "note": "Online self-service reconnection is available for electric service disconnected for non-payment. Reconnection times vary."
-    }
+  "local_moving": {
+    "overview": "Move Logistics provides comprehensive local moving services throughout San Antonio and surrounding areas. Whether you're moving from a studio apartment or a large family home, our career movers handle every detail with care.",
+    "services_included": [
+      "Loading and unloading of all household items",
+      "Furniture disassembly and reassembly",
+      "Furniture wrapping and protection",
+      "Floor and wall protection at both locations",
+      "Professional moving equipment and tools",
+      "Careful handling of fragile and valuable items"
+    ],
+    "property_types": [
+      "Houses",
+      "Apartments",
+      "Condos",
+      "High-rises",
+      "Townhomes",
+      "Senior living communities"
+    ],
+    "service_area": [
+      "San Antonio",
+      "Boerne",
+      "New Braunfels",
+      "Austin",
+      "Surrounding areas within Texas"
+    ],
+    "why_choose_us": [
+      "Career movers with minimum 5+ years of experience on every job",
+      "Family-owned and operated since 1990",
+      "80% of our business comes from referrals and repeat customers",
+      "Fully licensed and insured (TXDMV No. 006652155C)",
+      "Google 4.9/5 stars, Yelp 4.8/5 stars, Angi 5/5 stars",
+      "BBB A+ Rating",
+      "HomeAdvisor Top Rated & Elite Service"
+    ],
+    "pricing": "Contact us for a free estimate. Pricing depends on the size of your move, distance, and services needed. Call (210) 942-0357 or text (210) 838-7682."
   },
-
-  "energy_savings": {
-    "overview": "CPS Energy offers numerous programs and rebates to help customers save energy and money while reducing their environmental footprint.",
-    "programs": {
-      "step_program": {
-        "name": "Save for Tomorrow Energy Plan (STEP)",
-        "description": "CPS Energy's comprehensive energy efficiency program that offers rebates and incentives for energy-efficient upgrades to your home or business.",
-        "residential_rebates": [
-          {
-            "item": "Central A/C Rebate",
-            "description": "Rebate for installing a high-efficiency central air conditioning system.",
-            "rebate": "Varies by efficiency rating — check resi-savenow.cpsenergy.com for current amounts"
-          },
-          {
-            "item": "Heat Pump Rebate",
-            "description": "Rebate for installing a qualifying heat pump system.",
-            "rebate": "Varies by efficiency rating — check resi-savenow.cpsenergy.com for current amounts"
-          },
-          {
-            "item": "Window A/C Rebate",
-            "description": "Rebate for purchasing a qualifying energy-efficient window air conditioning unit.",
-            "rebate": "Varies — check resi-savenow.cpsenergy.com for current amounts"
-          },
-          {
-            "item": "Attic Insulation",
-            "description": "Rebate for adding or upgrading attic insulation.",
-            "rebate": "$0.25-$0.35 per square foot"
-          },
-          {
-            "item": "Cool Roof",
-            "description": "Rebate for installing a qualifying cool/reflective roof.",
-            "rebate": "$0.20 per square foot"
-          },
-          {
-            "item": "Pool Pump",
-            "description": "Rebate for installing a variable-speed or energy-efficient pool pump.",
-            "rebate": "$150 per horsepower"
-          },
-          {
-            "item": "Ductless Mini-Split",
-            "description": "Rebate for installing a qualifying ductless mini-split heat pump system.",
-            "rebate": "$100-$275 per ton"
-          },
-          {
-            "item": "Home Energy Assessment",
-            "description": "FREE professional home energy assessment to identify where your home is losing energy and recommend improvements.",
-            "rebate": "FREE"
-          },
-          {
-            "item": "High-Performance A/C Tune-Up",
-            "description": "FREE professional tune-up of your central air conditioning system to optimize performance and efficiency.",
-            "rebate": "FREE"
-          },
-          {
-            "item": "LED Light Bulbs and Air Purifiers",
-            "description": "Instant discounts on LED light bulbs and air purifiers at participating retail stores in the CPS Energy service area.",
-            "rebate": "Instant discount at participating stores"
-          }
-        ],
-        "how_to_apply": "Submit rebate applications online at resi-savenow.cpsenergy.com or email savenow@cpsenergy.com. Pre-approval may be required for some rebates. Keep all receipts and contractor invoices.",
-        "url": "https://resi-savenow.cpsenergy.com",
-        "email": "savenow@cpsenergy.com"
-      },
-      "nest_thermostat_program": {
-        "name": "Smart Thermostat / Nest Program",
-        "description": "CPS Energy partners with smart thermostat manufacturers to offer discounts on smart thermostats. Customers may also participate in demand response programs where CPS Energy can make minor temperature adjustments during peak demand events in exchange for bill credits.",
-        "benefits": [
-          "Discounted or free smart thermostat (when available)",
-          "Average energy savings of 10-15% on heating and cooling costs",
-          "Bill credits for participating in demand response / Rush Hour Rewards events",
-          "Remote control of your thermostat via smartphone"
-        ],
-        "how_to_enroll": "Visit cpsenergy.com or call 210-353-2222 to check current thermostat offers and demand response program availability."
-      },
-      "ev_program": {
-        "name": "Electric Vehicle (EV) Program",
-        "description": "CPS Energy supports the growing adoption of electric vehicles with special programs and resources for EV owners.",
-        "offerings": [
-          "Information on EV charging station installation",
-          "Time-of-use rate options that offer lower rates for overnight EV charging",
-          "Resources for commercial EV fleet charging",
-          "Public charging station locations in the CPS Energy service area"
-        ],
-        "ev_charging_tips": [
-          "Charge your EV during off-peak hours (typically 9 PM - 6 AM) for lowest rates",
-          "Consider a Level 2 (240V) home charger for faster charging",
-          "A licensed electrician should install your home charging equipment"
-        ],
-        "contact": "Call 210-353-2222 for more information about EV programs and rates."
-      },
-      "solar_program": {
-        "name": "Solar / Distributed Generation Program",
-        "description": "CPS Energy supports customers who want to install solar panels or other renewable energy systems on their property.",
-        "options": [
-          {
-            "name": "Rooftop Solar (Customer-Owned)",
-            "description": "Install your own solar panel system. CPS Energy offers a solar buyback program where excess energy generated is credited to your account."
-          },
-          {
-            "name": "SolarHost Program",
-            "description": "CPS Energy's community solar program. Solar panels are installed on your roof at no cost to you, and you receive a monthly bill credit."
-          },
-          {
-            "name": "Solar Buyback / Net Metering",
-            "description": "Customers with solar panels can sell excess electricity back to CPS Energy. Credits are applied to your monthly bill based on the current buyback rate."
-          }
-        ],
-        "requirements": [
-          "System must be installed by a licensed contractor",
-          "Must submit an interconnection agreement to CPS Energy before installation",
-          "System must pass inspection and meet CPS Energy technical requirements",
-          "Net metering available for systems up to 25 kW (residential)"
-        ],
-        "contact": "Call CPS Energy at 210-353-2222 or visit cpsenergy.com for current solar program details and buyback rates."
-      },
-      "demand_response_program": {
-        "name": "Demand Response Program",
-        "description": "Earn financial incentives for conserving energy during peak usage periods. When conservation events are called, CPS Energy may make minor thermostat adjustments (slightly higher) for participating customers with connected smart thermostats to help reduce strain on the grid.",
-        "benefits": [
-          "Financial incentives and bill credits for participation",
-          "Helps prevent rolling blackouts during extreme heat or cold",
-          "Thermostat adjustments are minor and temporary",
-          "Customers can opt out of individual events"
-        ],
-        "how_to_enroll": "Enroll through your smart thermostat program or call CPS Energy at 210-353-2222."
-      },
-      "commercial_programs": {
-        "name": "Commercial Energy Efficiency Programs",
-        "description": "CPS Energy offers energy efficiency programs and rebates for commercial and industrial customers.",
-        "offerings": [
-          "Commercial HVAC rebates",
-          "Lighting retrofits and LED upgrade rebates",
-          "Building envelope improvements",
-          "Custom commercial energy efficiency projects",
-          "Commercial energy audits"
-        ],
-        "contact": "Call the commercial line at 210-353-3333 for details."
-      }
+  "long_distance": {
+    "overview": "Move Logistics is your one-stop shop for interstate and long-distance moving. We handle moves across state lines with the same professional standards we apply to local relocations. Fully licensed for interstate transport.",
+    "services_included": [
+      "Full-service packing and wrapping",
+      "Loading, transport, and unloading",
+      "Furniture disassembly and reassembly",
+      "Professional moving equipment",
+      "Dedicated truck for your belongings",
+      "Honest and open communication throughout the entire move"
+    ],
+    "destinations_served": [
+      "Austin, TX",
+      "Houston, TX",
+      "Dallas/Fort Worth, TX",
+      "Carrollton, TX",
+      "Grand Prairie, TX",
+      "Colorado Springs, CO",
+      "Nationwide — all 48 contiguous states"
+    ],
+    "licensing": {
+      "mc_number": "MC # 919701",
+      "usdot_number": "USDOT # 2295112",
+      "txdmv_number": "TXDMV No. 006652155C"
     },
-    "online_tools": {
-      "my_energy_portal": {
-        "name": "My Energy Portal",
-        "description": "Online tool that helps customers track their energy usage over time, set energy-saving goals, and receive personalized tips to reduce consumption and lower bills.",
-        "access": "Log in to My Account at cpsenergy.com to access the My Energy Portal."
-      },
-      "energy_cost_calculator": {
-        "name": "Energy Cost Calculator",
-        "description": "Online tool that allows customers to estimate the cost of running individual appliances based on wattage and usage hours. Helps identify which appliances use the most energy.",
-        "access": "Available at cpsenergy.com."
-      }
-    },
-    "energy_saving_tips": [
-      "Set your thermostat to 78°F in summer and 68°F in winter",
-      "Replace air filters every 1-3 months",
-      "Use ceiling fans to supplement your AC (counterclockwise in summer)",
-      "Seal air leaks around windows, doors, and ductwork",
-      "Use LED light bulbs which use 75% less energy than incandescent",
-      "Unplug electronics and chargers when not in use (phantom load)",
-      "Run dishwashers and washing machines with full loads",
-      "Use a programmable or smart thermostat",
-      "Close blinds and curtains during the hottest part of the day",
-      "Ensure your attic has adequate insulation (R-38 or higher recommended for San Antonio)"
-    ]
+    "process": [
+      "Contact us for a free long-distance estimate",
+      "A moving consultant will assess the scope and plan your move",
+      "Our career movers pack, load, and transport your belongings safely",
+      "We deliver and unload at your new location on the scheduled date"
+    ],
+    "pricing": "Long-distance pricing is based on the weight of your shipment, distance, and services required. Contact us for a free estimate at (210) 942-0357."
   },
-
-  "contact_info": {
-    "overview": "CPS Energy provides multiple ways to reach customer service for different needs.",
-    "phone_numbers": {
-      "residential_customer_service": {
-        "number": "210-353-2222",
-        "toll_free": "800-870-1006",
-        "description": "Residential customer service for billing, payments, account inquiries, start/stop/transfer service, and general questions.",
-        "hours": "Monday-Friday 8:00 AM - 7:00 PM, Saturday 8:00 AM - 5:00 PM",
-        "after_hours": "Automated system available 24/7 for payments, outage reporting, and account balance."
-      },
-      "commercial_customer_service": {
-        "number": "210-353-3333",
-        "description": "Commercial and industrial customer service for business accounts.",
-        "hours": "Monday-Friday 8:00 AM - 7:00 PM"
-      },
-      "hearing_impaired": {
-        "number": "210-353-2224",
-        "description": "TTY/TDD line for hearing-impaired customers."
-      },
-      "emergency_and_outage": {
-        "number": "210-353-4357",
-        "description": "Report power outages, gas leaks, downed power lines, and other emergencies. Available 24/7.",
-        "hours": "24/7",
-        "note": "For life-threatening emergencies, always call 911 first."
-      },
-      "street_light_outage": {
-        "number": "210-353-4357",
-        "description": "Report street light outages. You can also report them online at cpsenergy.com."
-      },
-      "energy_efficiency_programs": {
-        "number": "210-353-4670",
-        "description": "Questions about rebates, energy efficiency programs, Project WARM, and STEP.",
-        "hours": "Monday-Friday 8:00 AM - 5:00 PM"
-      },
-      "call_before_you_dig": {
-        "number": "811",
-        "description": "Call 811 before any digging project to have underground utility lines marked for free. Required by Texas law.",
-        "hours": "24/7"
-      }
-    },
-    "online_resources": {
-      "website": "https://www.cpsenergy.com",
-      "my_account": "https://www.cpsenergy.com/myaccount",
-      "outage_map": "https://outagemap.cpsenergy.com",
-      "mobile_app": "Available on iOS App Store and Google Play Store (search 'CPS Energy')"
-    },
-    "walk_in_centers": [
+  "storage": {
+    "overview": "Move Logistics offers short-term and long-term storage solutions for clients who need to store belongings between moves or during transitions. All storage is in-house and monitored around the clock.",
+    "storage_types": [
       {
-        "name": "CPS Energy Main Plaza (Headquarters)",
-        "address": "145 Navarro St, San Antonio, TX 78205",
-        "hours": "Monday-Friday 7:30 AM - 5:30 PM (extended to 6:45 PM on Wednesdays)",
-        "night_deposit_box": true
+        "type": "Climate-Controlled Storage",
+        "description": "Temperature and humidity-controlled units ideal for sensitive items like electronics, artwork, wooden furniture, and documents.",
+        "features": ["Temperature regulated", "Humidity controlled", "24/7 security monitoring", "In-house facility"]
       },
       {
-        "name": "CPS Energy West",
-        "address": "2515 Babcock Rd, San Antonio, TX 78229",
-        "hours": "Monday-Friday 8:00 AM - 5:00 PM (extended to 6:45 PM on Wednesdays)",
-        "night_deposit_box": true
-      },
-      {
-        "name": "CPS Energy Southeast",
-        "address": "3495 E. Houston St, San Antonio, TX 78219",
-        "hours": "Monday-Friday 8:00 AM - 5:00 PM (extended to 6:45 PM on Wednesdays)",
-        "night_deposit_box": true
+        "type": "Non-Climate Storage",
+        "description": "Standard storage units for items that don't require temperature control. Great for general household goods, boxes, and durable items.",
+        "features": ["Secure facility", "24/7 security monitoring", "In-house facility", "Cost-effective option"]
       }
     ],
-    "night_deposit_boxes": "Night deposit boxes are available 24/7 at all CPS Energy service centers for after-hours check and money order payments.",
-    "social_media": {
-      "twitter": "@CPSEnergy",
-      "facebook": "facebook.com/cpsenergy",
-      "youtube": "youtube.com/cpsenergy",
-      "instagram": "@cpsenergy"
-    },
-    "email": {
-      "general": "customerservice@cpsenergy.com"
-    },
-    "mailing_address": {
-      "payments": "CPS Energy, P.O. Box 101, San Antonio, TX 78291-0101",
-      "general_correspondence": "CPS Energy, 145 Navarro St, San Antonio, TX 78205"
-    },
-    "service_area": "CPS Energy serves the greater San Antonio, Texas metropolitan area in Bexar County and portions of surrounding counties. It is the nation's largest municipally-owned electric and gas utility, serving over 950,000 electric customers and more than 389,000 natural gas customers. Established in 1860, CPS Energy bills rank among the lowest of the nation's 20 largest cities. CPS Energy has generated $9.6 billion in revenue for the City of San Antonio over 80 years and is ranked #1 in Texas for solar generation."
+    "security": "All storage units are in-house and monitored around the clock to ensure the safety of your belongings.",
+    "terms": "Both short-term and long-term storage available. Flexible terms to fit your needs.",
+    "pricing": "Contact us for storage rates and availability. Call (210) 942-0357 or text (210) 838-7682."
   },
-
-  "safety": {
-    "overview": "CPS Energy is committed to public safety. Learn how to stay safe around electricity and natural gas.",
-    "electrical_safety": {
-      "downed_power_lines": {
-        "description": "Downed power lines are extremely dangerous and can be fatal.",
-        "tips": [
-          "Always assume a downed power line is energized and dangerous",
-          "Stay at least 35 feet away from downed lines",
-          "Do not touch anything in contact with a downed power line (cars, fences, trees)",
-          "If your car is in contact with a downed line, stay inside and call 911",
-          "Call CPS Energy immediately at 210-353-4357 to report downed lines",
-          "If you must exit a vehicle near a downed line, jump clear without touching the vehicle and the ground at the same time, then shuffle away with small steps"
-        ]
+  "packing_services": {
+    "overview": "Why do the packing yourself when you can hire a professional packer and make your move even more stress-free? Our packers have the experience and knowledge to carefully protect all your items on move day.",
+    "services_included": [
+      "Full-service packing of your entire home or office",
+      "Partial packing — we pack the items you choose",
+      "Unpacking services at your new location",
+      "Specialty packing for fragile and valuable items",
+      "Professional packing materials and supplies"
+    ],
+    "packing_materials": [
+      "Moving boxes in all sizes",
+      "Bubble wrap and packing paper",
+      "Furniture pads and blankets",
+      "Shrink wrap for upholstered furniture",
+      "Specialty cartons for mirrors, artwork, and TVs",
+      "Wardrobe boxes for clothing",
+      "Tape and labeling supplies"
+    ],
+    "options": [
+      {
+        "option": "Full Packing",
+        "description": "Our team packs your entire home or office from start to finish. We bring all materials and handle everything so you don't have to lift a finger."
       },
-      "outdoor_safety": [
-        "Keep ladders, antennas, and kites at least 10 feet from power lines",
-        "Never climb utility poles or transmission towers",
-        "Call 811 before digging to locate underground lines",
-        "Keep trees trimmed away from power lines (CPS Energy provides free tree trimming near power lines)",
-        "Do not build structures or plant trees under or near power lines",
-        "Stay away from substations and electrical equipment"
-      ],
-      "indoor_safety": [
-        "Do not overload electrical outlets or extension cords",
-        "Replace damaged or frayed electrical cords immediately",
-        "Use Ground Fault Circuit Interrupters (GFCIs) in wet areas like bathrooms and kitchens",
-        "Keep electrical appliances away from water",
-        "Never use indoor appliances outdoors",
-        "Install and maintain smoke detectors on every level of your home",
-        "Have a licensed electrician perform electrical work"
-      ],
-      "generator_safety": [
-        "Never operate a generator indoors or in an enclosed space",
-        "Place generators at least 20 feet from your home",
-        "Never connect a generator directly to home wiring (use a transfer switch installed by a licensed electrician)",
-        "Allow generators to cool before refueling",
-        "Install carbon monoxide detectors in your home"
-      ]
-    },
-    "natural_gas_safety": {
-      "detecting_a_gas_leak": {
-        "signs": [
-          "Rotten egg or sulfur-like smell (added odorant called mercaptan)",
-          "Hissing or blowing sound near gas lines or appliances",
-          "Dead or dying vegetation in an otherwise green area",
-          "Bubbling in standing water",
-          "Dirt or dust blowing from a hole in the ground"
-        ]
+      {
+        "option": "Partial Packing",
+        "description": "You pack some items yourself, and we handle the rest — perfect for fragile items, kitchens, or rooms you'd rather leave to the pros."
       },
-      "what_to_do_if_you_smell_gas": [
-        "Leave the area immediately - do not try to find the leak",
-        "Do NOT turn on/off any electrical switches, lights, or appliances",
-        "Do NOT use your phone inside the building - call from a safe distance",
-        "Do NOT light matches, candles, or any open flame",
-        "Do NOT start vehicles near the suspected leak",
-        "Call CPS Energy at 210-353-4357 from a safe location",
-        "Call 911 if you believe there is immediate danger",
-        "Do not return until CPS Energy or emergency responders say it is safe"
-      ],
-      "gas_appliance_safety": [
-        "Have gas appliances inspected annually by a qualified technician",
-        "Ensure proper ventilation for all gas appliances",
-        "Keep flammable materials away from gas appliances",
-        "Install carbon monoxide detectors near gas appliances and sleeping areas",
-        "Know how to shut off your gas meter in an emergency",
-        "Never use a gas oven or stove to heat your home"
-      ],
-      "carbon_monoxide": {
-        "description": "Carbon monoxide (CO) is a colorless, odorless gas produced by burning fuel. It can be deadly.",
-        "symptoms": ["Headache", "Dizziness", "Nausea", "Confusion", "Weakness", "Loss of consciousness"],
-        "prevention": [
-          "Install CO detectors on every level of your home",
-          "Have fuel-burning appliances inspected annually",
-          "Never use generators, grills, or camp stoves indoors",
-          "Never run a vehicle in an enclosed garage"
-        ],
-        "emergency": "If your CO detector alarms or you suspect CO poisoning, leave immediately, get fresh air, and call 911."
+      {
+        "option": "Packing Supplies Only",
+        "description": "We provide professional-grade moving supplies so you can pack at your own pace. Boxes, tape, bubble wrap, and more."
+      }
+    ],
+    "pricing": "Contact us for packing service rates. Pricing depends on the size of your home and the level of service needed. Call (210) 942-0357."
+  },
+  "office_moving": {
+    "overview": "Move Logistics specializes in moving entire corporate offices and relocating them with minimal disruption to your business operations. Our professionally trained movers handle everything from packing to heavy equipment.",
+    "services_included": [
+      "Custom moving consultation and planning",
+      "Office furniture disassembly and reassembly",
+      "IT equipment and electronics handling",
+      "Heavy-duty equipment moving",
+      "High-liability equipment moving",
+      "In-house forklifts available",
+      "Moving supplies provided",
+      "Packing and wrapping of all office contents"
+    ],
+    "client_types": [
+      "Retail stores",
+      "Professional offices",
+      "Medical offices",
+      "Educational facilities",
+      "Corporate offices",
+      "Government facilities",
+      "Warehouses"
+    ],
+    "process": [
+      "Schedule a free consultation to assess your office move",
+      "We create a custom relocation plan to minimize downtime",
+      "Our career movers execute the move efficiently and carefully",
+      "We set up at your new location so you can get back to business"
+    ],
+    "pricing": "Office moving pricing depends on the size of your office, equipment involved, and distance. Contact us for a free consultation at (210) 942-0357."
+  },
+  "white_glove": {
+    "overview": "Move Logistics offers white glove moving services for customers who want the highest level of care and attention for their belongings. This premium service ensures every item receives special handling from start to finish.",
+    "services_included": [
+      "Premium packing with high-quality materials",
+      "Extra care for fragile, antique, and high-value items",
+      "Detailed inventory and labeling",
+      "Custom crating for artwork, mirrors, and delicate pieces",
+      "Furniture placement and setup at destination",
+      "Floor and wall protection",
+      "Full unpacking and debris removal"
+    ],
+    "ideal_for": [
+      "Antiques and heirloom furniture",
+      "Fine art and sculptures",
+      "Pianos and musical instruments",
+      "Wine collections",
+      "Chandeliers and delicate fixtures",
+      "High-value electronics and home theater systems",
+      "Estate moves"
+    ],
+    "pricing": "White glove service pricing is customized based on the items and scope of your move. Call (210) 942-0357 for a free consultation."
+  },
+  "contact_info": {
+    "phone_numbers": {
+      "main_office": {
+        "number": "(210) 942-0357",
+        "hours": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
+      },
+      "text_sms": {
+        "number": "(210) 838-7682",
+        "hours": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
+      },
+      "boerne_office": {
+        "number": "(830) 396-5798",
+        "hours": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
       }
     },
-    "tree_trimming": {
-      "description": "CPS Energy provides free tree trimming services to maintain safe clearances around power lines.",
-      "details": [
-        "CPS Energy trims trees within 10 feet of power lines at no charge",
-        "Trimming follows International Society of Arboriculture (ISA) standards",
-        "Customers are responsible for trees not near power lines",
-        "To request tree trimming near power lines, call 210-353-2222"
-      ]
+    "email": "marc@movelogistics.net",
+    "website": "https://movelogistics.net",
+    "locations": [
+      {
+        "name": "San Antonio (Headquarters)",
+        "address": "10510 Interstate 35 Frontage Rd, San Antonio, TX 78233",
+        "phone": "(210) 942-0357",
+        "hours": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
+      },
+      {
+        "name": "Boerne",
+        "address": "209 TX-46, Boerne, TX 78006",
+        "phone": "(830) 396-5798",
+        "hours": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 7:00 AM - 2:00 PM"
+      }
+    ],
+    "service_area": "San Antonio, Boerne, New Braunfels, Austin, Houston, Dallas/Fort Worth, and nationwide for long-distance moves.",
+    "licensing": {
+      "mc_number": "MC # 919701",
+      "usdot_number": "USDOT # 2295112",
+      "txdmv_number": "TXDMV No. 006652155C",
+      "uei_number": "UEI # JA2WZ3BE46N9"
     },
-    "call_before_you_dig": {
-      "number": "811",
-      "description": "Texas law requires you to call 811 at least 2 business days before any digging project. A locator will mark underground utility lines at no charge.",
-      "applies_to": "All digging projects including fence posts, landscaping, swimming pools, foundations, and sprinkler systems."
+    "ratings": {
+      "google": "4.9/5 stars",
+      "yelp": "4.8/5 stars",
+      "angi": "5/5 stars",
+      "bbb": "A+ Rating",
+      "homeadvisor": "Top Rated & Elite Service"
     },
-    "emergency_contacts": {
-      "life_threatening_emergency": "911",
-      "cps_energy_emergency": "210-353-4357",
-      "poison_control": "1-800-222-1222"
+    "social_media": {
+      "website": "https://movelogistics.net"
     }
+  },
+  "about": {
+    "company_name": "Move Logistics",
+    "established": 1990,
+    "description": "Move Logistics is a family-owned and operated moving company based in San Antonio, Texas, serving the local community and the nation since 1990. With over 35 years of experience, we have built our reputation on trust, professionalism, and exceptional service.",
+    "referral_rate": "80% of our business comes from referrals and repeat customers — a testament to the quality of service we deliver on every move.",
+    "team": "We send out 'Career Movers' on every relocation project — experienced professionals with a minimum of 5+ years in the moving industry. Our team is trained to handle your belongings with the utmost care.",
+    "values": [
+      "Honest and open communication throughout every move",
+      "Treating your belongings as if they were our own",
+      "Stress-free moving experience from start to finish",
+      "Fair and transparent pricing",
+      "Family values in every interaction"
+    ]
   }
 }

@@ -87,7 +87,16 @@
       "Bash(git push -u origin main)",
       "Bash(cat > /Users/poly/Desktop/cps-energy-bot/vercel.json << 'EOF'\n{\n  \"version\": 2,\n  \"builds\": [{ \"src\": \"server/index.js\", \"use\": \"@vercel/node\" }],\n  \"routes\": [\n    { \"src\": \"/api/\\(.*\\)\", \"dest\": \"server/index.js\" },\n    { \"src\": \"/\\(.*\\)\", \"dest\": \"server/index.js\" }\n  ]\n}\nEOF)",
       "Bash(git add -A && git commit -m \"add vercel config\" && git push)",
-      "Bash(git add -A && git commit -m \"fix vercel static files\" && git push)"
+      "Bash(git add -A && git commit -m \"fix vercel static files\" && git push)",
+      "Bash(cp -r ~/Desktop/cps-energy-bot ~/Desktop/move-logistics-bot)",
+      "WebFetch(domain:movelogistics.net)",
+      "Bash(node -e \"const { getSystemPrompt } = require\\('./server/prompts/system-prompt'\\); const p = getSystemPrompt\\(\\); console.log\\('System prompt loaded successfully. Length:', p.length\\); console.log\\('---First 200 chars---'\\); console.log\\(p.substring\\(0, 200\\)\\);\")",
+      "Bash(git remote remove origin)",
+      "Bash(gh repo create move-logistics-bot --public --source=. --remote=origin --description \"Move Logistics AI chatbot - San Antonio moving company\")",
+      "Bash(which gh || brew list gh 2>/dev/null || echo \"gh not installed\")",
+      "Bash(brew install gh)",
+      "Bash(gh auth status 2>&1)",
+      "Bash(gh auth login --web --git-protocol https)"
     ]
   }
 }

@@ -30,11 +30,11 @@ app.get('/health', (req, res) => {
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err.message || err);
   res.status(500).json({
-    error: 'Something went wrong. Please call CPS Energy at 210-353-2222 for immediate help.'
+    error: 'Something went wrong. Please call Move Logistics at (210) 942-0357 for immediate help.'
   });
 });
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`CPS Energy Bot server running on port ${PORT}`);
+  console.log(`Move Logistics Bot server running on port ${PORT}`);
 });

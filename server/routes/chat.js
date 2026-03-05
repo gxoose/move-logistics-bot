@@ -40,7 +40,7 @@ router.post('/chat', chatLimiter, async (req, res) => {
     console.error('Chat endpoint error:', error.message || error);
     if (!res.headersSent) {
       return res.status(500).json({
-        error: 'We\'re having trouble connecting to our assistant. Please call CPS Energy at 210-353-2222 for immediate help.'
+        error: 'We\'re having trouble connecting to our assistant. Please call Move Logistics at (210) 942-0357 for immediate help.'
       });
     }
     res.end();
